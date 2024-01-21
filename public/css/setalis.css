@@ -1,0 +1,20 @@
+@media (min-width: 992px) {
+    .header .header-bottom {
+        height: 54px;
+    }
+}
+
+.header-menu .menu-nav .menu-link .menu-text {
+    font-size: 1.2em !important;
+}
+
+.header-menu .menu-nav .menu-link .menu-text .icon-arrow {
+    margin-left: 8px;
+    rotate: 0deg;
+    transition: all 0.4s ease-in-out;
+}
+
+.header-menu .menu-nav>.menu-item:hover:not(.menu-item-here):not(.menu-item-active)>.menu-link .menu-text .icon-arrow,
+.header-menu .menu-nav>.menu-item.menu-item-hover:not(.menu-item-here):not(.menu-item-active)>.menu-link .menu-text .icon-arrow {
+    rotate: 90deg;
+}
