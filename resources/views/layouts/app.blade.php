@@ -180,6 +180,7 @@
 <script src='{{ url("assets/plugins/global/plugins.bundle.js") }}'></script>
 <script src='{{ url("assets/plugins/custom/prismjs/prismjs.bundle.js") }}'></script>
 <script src='{{ url("assets/js/scripts.bundle.js") }}'></script>
+<script src='{{ url("js/setalis.js") }}'></script>
 
 @stack('script')
 
