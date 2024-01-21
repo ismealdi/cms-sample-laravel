@@ -4,6 +4,7 @@ namespace App\Http\Controllers\CMS;
 
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use App\Http\Requests\SliderRequest;
 use App\Repositories\SliderRepository;
 
 class SliderController extends CmsController
@@ -21,7 +22,9 @@ class SliderController extends CmsController
      */
     public function index()
     {
-        return view('cms.slider.index');
+        $data = $this->sliderRepository->all();
+
+        return view('cms.slider.index', compact('data'));
     }
 
     /**
@@ -37,7 +40,12 @@ class SliderController extends CmsController
      */
     public function store(Request $request)
     {
-        //
+        $request["state"] = (isset($request["state"])) ? 1 : 0;
+
+        $input = $request->all();
+        $slider = $this->sliderRepository->create($input);
+
+        return redirect()->route('cms.slider.index');
     }
 
     /**
@@ -51,24 +59,39 @@ class SliderController extends CmsController
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Slider $slider)
+    public function edit(string $id)
     {
-        //
+        $data = $this->sliderRepository->find($id);
+
+        return view('cms.slider.edit', compact('data'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Slider $slider)
+    public function update(Request $request, string $id)
     {
-        //
+        $request["state"] = (isset($request["state"])) ? 1 : 0;
+
+        $input = $request->all();
+        $slider = $this->sliderRepository->update($input, $id);
+
+        return redirect()->route('cms.slider.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Slider $slider)
+    public function destroy(string $id)
     {
-        //
+        $data = $this->sliderRepository->find($id);
+
+        if (empty($data)) {
+            return $this->sendError('data not found');
+        }
+
+        $this->sliderRepository->delete($id);
+
+        return $this->sendSuccess('Data deleted successfully');
     }
 }

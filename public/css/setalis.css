@@ -18,3 +18,16 @@
 .header-menu .menu-nav>.menu-item.menu-item-hover:not(.menu-item-here):not(.menu-item-active)>.menu-link .menu-text .icon-arrow {
     rotate: 90deg;
 }
+
+.image-slider {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.swal2-popup {
+    aspect-ratio: 1 / 1;
+    border-radius: 40px;
+    padding-bottom: 5rem;
+}

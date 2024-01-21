@@ -14,13 +14,14 @@
         <div class="card-toolbar">
         </div>
     </div>
-    <form class="form" action="{{ route('cms.slider.store') }}" method="post">
+    <form class="form" action="{{ route('cms.slider.store') }}" method="POST">
         @csrf
+
         <div class="card-body">
             <div class="form-group row">
                 <div class="col-lg-12">
                     <label>Name:</label>
-                    <input type="text" class="form-control" placeholder="Enter Slider Name" required />
+                    <input type="text" name="name" class="form-control" placeholder="Enter Slider Name" required />
                     <span class="form-text text-muted">Please enter your slider name</span>
                 </div>
             </div>
@@ -46,11 +47,17 @@
                     </div>
                 </div>
             </div>
+            <div class="form-group row">
+                <label class="col-form-label text-left col-lg-3 col-sm-12">Status Slider</label>
+                <div class="col-lg-9 col-md-9 col-sm-12">
+                    <input data-switch="true" type="checkbox" checked="checked" name="state" />
+                </div>
+            </div>
         </div>
         <div class="card-footer">
             <div class="row">
                 <div class="col-lg-6">
-                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                    <a href="{{ route('cms.slider.index') }}" type="reset" class="btn btn-secondary">Cancel</a>
                 </div>
                 <div class="col-lg-6 text-lg-right">
                     <button type="submit" class="btn btn-primary">Save</button>
@@ -63,6 +70,26 @@
 @push('script')
 <script>
     var avatar2 = new KTImageInput('image_file');
+
+
+    var KTBootstrapSwitch = function () {
+        // Private functions
+        var demos = function () {
+            // minimum setup
+            $('[data-switch=true]').bootstrapSwitch();
+        };
+
+        return {
+            // public functions
+            init: function () {
+                demos();
+            },
+        };
+    }();
+
+    jQuery(document).ready(function () {
+        KTBootstrapSwitch.init();
+    });
 
     document.querySelector("#image_remove").addEventListener("click", function (e) {
         $("#image_base64").val("");
