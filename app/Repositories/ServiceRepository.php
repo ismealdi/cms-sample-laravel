@@ -7,9 +7,9 @@ use App\Repositories\BaseRepository;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
-class SliderRepository extends BaseRepository
+class ServiceRepository extends BaseRepository
 {
-    public $fieldSearchable =[
+    protected $fieldSearchable =[
         'name',
         'image'
     ];

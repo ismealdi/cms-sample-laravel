@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\File;
 class SliderRepository extends BaseRepository
 {
 
-    public $fieldSearchable = [
+    protected $fieldSearchable = [
         'name',
         'image',
         'state'

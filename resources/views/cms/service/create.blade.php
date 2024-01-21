@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Create Slider')
+@section('title', 'Create Service')
 @section('subheader', true)
 @section('buttons')
 
@@ -14,14 +14,14 @@
         <div class="card-toolbar">
         </div>
     </div>
-    <form class="form" action="{{ route('cms.slider.store') }}" method="post">
+    <form class="form" action="{{ route('cms.service.store') }}" method="post">
         @csrf
         <div class="card-body">
             <div class="form-group row">
                 <div class="col-lg-12">
                     <label>Name:</label>
-                    <input type="text" class="form-control" placeholder="Enter Slider Name" required />
-                    <span class="form-text text-muted">Please enter your slider name</span>
+                    <input type="text" class="form-control" placeholder="Enter Service Name" required />
+                    <span class="form-text text-muted">Please enter your service name</span>
                 </div>
             </div>
             <div class="form-group row">
