@@ -29,7 +29,7 @@ class SliderController extends CmsController
      */
     public function create()
     {
-        //
+        return view('cms.slider.create');
     }
 
     /**

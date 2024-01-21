@@ -181,4 +181,6 @@
 <script src='{{ url("assets/plugins/custom/prismjs/prismjs.bundle.js") }}'></script>
 <script src='{{ url("assets/js/scripts.bundle.js") }}'></script>
 
+@stack('script')
+
 </html>
