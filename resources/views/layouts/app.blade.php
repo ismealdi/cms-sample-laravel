@@ -118,6 +118,7 @@
                         <!--begin::Container-->
                         <div class="container">
                             Perubahan
+                            iman
                             @yield('content')
                             @yield('pagination')
                         </div>
