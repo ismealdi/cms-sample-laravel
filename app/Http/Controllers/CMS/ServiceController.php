@@ -5,6 +5,8 @@ namespace App\Http\Controllers\CMS;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use App\Repositories\ServiceRepository;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class ServiceController extends CmsController
 {
@@ -20,7 +22,7 @@ class ServiceController extends CmsController
      */
     public function index()
     {
-        //
+        return view('cms.service.index');
     }
 
     /**
