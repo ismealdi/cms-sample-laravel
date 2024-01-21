@@ -5,7 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Slider extends Model
+class Slider extends AppBaseModel
 {
-    use HasFactory;
+    public $table = 'sliders';
+
+    public $fillable = [
+        'name',
+        'image',
+        'state'
+    ];
+
+    protected $casts = [
+        'state' => 'boolean',
+    ];
+
+    
 }

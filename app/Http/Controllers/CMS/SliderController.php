@@ -4,15 +4,24 @@ namespace App\Http\Controllers\CMS;
 
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use App\Repositories\SliderRepository;
 
 class SliderController extends CmsController
 {
+
+    private $sliderRepository;        
+    
+    public function __construct(SliderRepository $sliderRepo) {
+        $this->middleware('auth');
+        $this->sliderRepository = $sliderRepo;
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return view('cms.slider.index');
     }
 
     /**
