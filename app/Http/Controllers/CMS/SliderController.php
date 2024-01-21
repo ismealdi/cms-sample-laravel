@@ -13,7 +13,7 @@ class SliderController extends CmsController
     
     public function __construct(SliderRepository $sliderRepo) {
         $this->middleware('auth');
-        $this->sliderRepository = $slideRepo;
+        $this->sliderRepository = $sliderRepo;
     }
 
     /**
@@ -21,7 +21,7 @@ class SliderController extends CmsController
      */
     public function index()
     {
-        return view('');
+        return view('cms.slider.index');
     }
 
     /**

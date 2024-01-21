@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Dyrynda\Database\Support\CascadeSoftDeletes;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Support\Str;
 
@@ -12,7 +11,7 @@ use Auth;
 
 class AppBaseModel extends Model {
 
-    use SoftDeletes, CascadeSoftDeletes, HasUuids;
+    use SoftDeletes, HasUuids;
     
     protected $primaryKey = 'id';
     public $incrementing = false;
