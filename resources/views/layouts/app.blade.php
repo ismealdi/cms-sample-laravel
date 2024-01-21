@@ -117,8 +117,6 @@
                     <div class="d-flex flex-column-fluid @hasSection('subheader') py-0 @else py-2 py-lg-6 @endif">
                         <!--begin::Container-->
                         <div class="container">
-                            Perubahan
-                            iman
                             @yield('content')
                             @yield('pagination')
                         </div>
