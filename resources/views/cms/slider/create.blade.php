@@ -57,7 +57,7 @@
         <div class="card-footer">
             <div class="row">
                 <div class="col-lg-6">
-                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                    <a href="{{ route('cms.slider.index') }}" type="reset" class="btn btn-secondary">Cancel</a>
                 </div>
                 <div class="col-lg-6 text-lg-right">
                     <button type="submit" class="btn btn-primary">Save</button>

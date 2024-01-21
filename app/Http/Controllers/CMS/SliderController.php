@@ -59,17 +59,24 @@ class SliderController extends CmsController
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Slider $slider)
+    public function edit(string $id)
     {
-        //
+        $data = $this->sliderRepository->find($id);
+
+        return view('cms.slider.edit', compact('data'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Slider $slider)
+    public function update(Request $request, string $id)
     {
-        //
+        $request["state"] = (isset($request["state"])) ? 1 : 0;
+
+        $input = $request->all();
+        $slider = $this->sliderRepository->update($input, $id);
+
+        return redirect()->route('cms.slider.index');
     }
 
     /**
