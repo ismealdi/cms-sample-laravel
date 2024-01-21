@@ -30,7 +30,7 @@ class ServiceController extends CmsController
      */
     public function create()
     {
-        //
+        return view('cms.service.create');
     }
 
     /**

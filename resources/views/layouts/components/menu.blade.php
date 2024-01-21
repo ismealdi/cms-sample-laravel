@@ -27,12 +27,12 @@
                     </a>
                 </li>
                 <li class="menu-item " aria-haspopup="true">
-                    <a target="_blank" href="{{ route('cms.service.index') }}" class="menu-link ">
+                    <a href="{{ route('cms.service.index') }}" class="menu-link ">
                         <span class="menu-text">Service</span><span class="menu-desc"></span>
                     </a>
                 </li>
                 <li class="menu-item" aria-haspopup="true">
-                    <a target="_blank" href="{{ route('cms.information.index') }}" class="menu-link ">
+                    <a href="{{ route('cms.information.index') }}" class="menu-link ">
                         <span class="menu-text">Information</span><span class="menu-desc"></span>
                     </a>
                 </li>
@@ -65,7 +65,7 @@
                     </a>
                 </li>
                 <li class="menu-item " aria-haspopup="true">
-                    <a target="_blank" href="{{ route('cms.service.index') }}" class="menu-link ">
+                    <a href="{{ route('cms.service.index') }}" class="menu-link ">
                         <span class="menu-text">Activity</span><span class="menu-desc"></span>
                     </a>
                 </li>
