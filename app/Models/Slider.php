@@ -12,7 +12,7 @@ class Slider extends AppBaseModel
     public $fillable = [
         'name',
         'image',
-        'state'
+        'state',
     ];
 
     protected $casts = [

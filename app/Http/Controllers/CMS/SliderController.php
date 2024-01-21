@@ -4,6 +4,7 @@ namespace App\Http\Controllers\CMS;
 
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use App\Http\Requests\SliderRequest;
 use App\Repositories\SliderRepository;
 
 class SliderController extends CmsController
@@ -21,7 +22,9 @@ class SliderController extends CmsController
      */
     public function index()
     {
-        return view('cms.slider.index');
+        $data = $this->sliderRepository->all();
+
+        return view('cms.slider.index', compact('data'));
     }
 
     /**
@@ -37,7 +40,12 @@ class SliderController extends CmsController
      */
     public function store(Request $request)
     {
-        //
+        $request["state"] = (isset($request["state"])) ? 1 : 0;
+
+        $input = $request->all();
+        $slider = $this->sliderRepository->create($input);
+
+        return redirect()->route('cms.slider.index');
     }
 
     /**
@@ -67,8 +75,16 @@ class SliderController extends CmsController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Slider $slider)
+    public function destroy(string $id)
     {
-        //
+        $data = $this->sliderRepository->find($id);
+
+        if (empty($data)) {
+            return $this->sendError('data not found');
+        }
+
+        $this->sliderRepository->delete($id);
+
+        return $this->sendSuccess('Data deleted successfully');
     }
 }

@@ -40,6 +40,8 @@ class SliderRepository extends BaseRepository
                 $model->update(["image" => $photo]);
             }
         }
+
+        return $model;
     }
 
     public function update(array $input, string $id): Slider {
@@ -68,7 +70,7 @@ class SliderRepository extends BaseRepository
         $query = $this->model->newQuery();
         $model = $query->findOrFail($id);
 
-        $filepath = storage_path('app/public/sliders'.$model->image);
+        $filepath = storage_path('app/public/sliders/'.$model->image);
 
         if(File::exists($filepath)) {
             File::delete($filepath);
