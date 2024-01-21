@@ -4,15 +4,25 @@ namespace App\Http\Controllers\CMS;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
+use App\Repositories\ServiceRepository;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class ServiceController extends CmsController
 {
+    private $serviceRepsitory;
+    
+    
+    public function __construct(ServiceRepository $servicerepo= null) {
+        $this->middleware('auth');
+        $this->serviceRepsitory = $servicerepo;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return view('cms.service.index');
     }
 
     /**

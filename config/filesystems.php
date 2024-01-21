@@ -44,6 +44,14 @@ return [
             'throw' => false,
         ],
 
+        'services' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/services'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+        
         'sliders' => [
             'driver' => 'local',
             'root' => storage_path('app/public/sliders'),
