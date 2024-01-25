@@ -59,9 +59,11 @@
                 </div>
                 <div class="col-lg-6 text-lg-right">
                     <button type="submit" class="btn btn-primary">Save</button>
+                    
                 </div>
             </div>
         </div>
+        
         {!! form::close()!!}
 </div>
 @endsection
