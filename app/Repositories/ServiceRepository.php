@@ -26,7 +26,6 @@ class ServiceRepository extends BaseRepository
         $model = $this->model->newInstance($input);
         $model->save();
 
-
         if(isset($input['image_file'])){
             $base64_image = $input['image_file'];
             if (preg_match('/^data:image\/(\w+);base64,/', $base64_image)) {

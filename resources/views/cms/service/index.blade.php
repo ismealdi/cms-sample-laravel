@@ -9,9 +9,10 @@
 @endsection
 @section('content')
 <div class="row list-item">
-    
+
+    @foreach($data as $item)
     <!--begin::Column-->
-    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6" data-route="i">
+    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6" data-route="item-data-{{ $item->id }}">
         <!--begin::Card-->
         <div class="card card-custom gutter-b card-stretch">
             <!--begin::Body-->
@@ -27,7 +28,7 @@
                             <!--begin::Navigation-->
                             <ul class="navi navi-hover">
                                 <li class="navi-item">
-                                    <a href="{{ route('cms.service.edit', 'id') }}" class="navi-link">
+                                    <a href="{{ route('cms.service.edit', $item->id) }}" class="navi-link">
                                         <span class="navi-text">
                                             Edit
                                         </span>
@@ -35,7 +36,7 @@
                                 </li>
                                 <li class="navi-item">
                                     <a class="navi-link delete"
-                                        data-route="{{ route('cms.service.destroy', 'id') }}">
+                                        data-route="{{ route('cms.service.destroy', $item->id) }}">
                                         <span class="navi-text text-danger">
                                             Delete
                                         </span>
@@ -48,16 +49,16 @@
                 </div>
                 <!--end::Toolbar-->
                 <div class="mt-7">
-                    <img src="{{ asset('storage/service/') }}" alt="image" class="image-slider rounded">
+                    <img src="{{ asset('storage/services/'.$item->image) }}" alt="image" class="image-slider rounded">
                 </div>
                 <div class="my-4">
-                    <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4"></a>
+                    <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4">{{ $item->name }}</a>
                 </div>
                 <!--end::Name-->
                 <!--begin::Label-->
                 <span
-                    class="btn btn-text btn-light-{{ ('state') ? 'success' : 'danger'}} btn-sm font-weight-bold">{{
-                    ('state') ? 'Active' : 'Not
+                    class="btn btn-text btn-light-{{ ($item->state) ? 'success' : 'danger'}} btn-sm font-weight-bold">{{
+                    ($item->state) ? 'Active' : 'Not
                     Active' }}</span>
                 <!--end::Label-->
             </div>
@@ -66,7 +67,8 @@
         <!--end::Card-->
     </div>
     <!--end::Column-->
-   
+    @endforeach
+
 </div>
 
 @endsection

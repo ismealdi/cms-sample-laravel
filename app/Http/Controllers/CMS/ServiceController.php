@@ -32,8 +32,6 @@ class ServiceController extends CmsController
      */
     public function create()
     {
-        
-
         return view('cms.service.create');
     }
 
@@ -41,11 +39,10 @@ class ServiceController extends CmsController
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        $request["state"] = (isset($request["state"])) ? 1 : 0;
-
+    {        
         $input = $request->all();
         $service = $this->serviceRepsitory->create($input);
+
         return redirect()->route('cms.service.index');
     }
 

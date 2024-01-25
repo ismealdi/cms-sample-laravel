@@ -20,7 +20,7 @@
             <div class="form-group row">
                 <div class="col-lg-12">
                     <label>Name:</label>
-                    <input type="text" class="form-control" placeholder="Enter Service Name" required />
+                    <input type="text" class="form-control" placeholder="Enter Service Name" name="name" required />
                     <span class="form-text text-muted">Please enter your service name</span>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                     <button type="reset" class="btn btn-secondary">Cancel</button>
                 </div>
                 <div class="col-lg-6 text-lg-right">
-                
+
                     <button type="submit" class="btn btn-primary">Save</button>
                 </div>
             </div>
