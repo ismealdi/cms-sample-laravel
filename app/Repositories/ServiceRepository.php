@@ -23,7 +23,7 @@ class ServiceRepository extends BaseRepository
     }
 
     public function create(array $input): Service{
-        $model = $this->newInstance($input);
+        $model = $this->model->newInstance($input);
         $model->save();
 
 
@@ -32,22 +32,25 @@ class ServiceRepository extends BaseRepository
             if (preg_match('/^data:image\/(\w+);base64,/', $base64_image)) {
                 $photo =$model->id. ".png";
                 $data = substr($base64_image, strpos($base64_image, ',')+1);
-                $data =$base64_decode($data);
+                $data = base64_decode($data);
+
                 storage::disk("services") ->put($photo, $data);
 
                 $model->update(["image"=> $photo]);
             }       
         }
+        return $model;
     }
 
     public function update(array $input, string $id): Service{
-        if(isset($input['image_file'])){
-            $base64_image = $input['image_file'];
+        if(isset($input['image_file'])) {
+            $base64_image = $input["image_file"];
             if (preg_match('/^data:image\/(\w+);base64,/', $base64_image)) {
-                $photo =$model->id. ".png";
-                $data = substr($base64_image, strpos($base64_image, ',')+1);
-                $data =$base64_decode($data);
-                storage::disk("services") ->put($photo, $data);
+                $photo = $id.".png";
+                $data = substr($base64_image, strpos($base64_image, ',') + 1);
+                $data = base64_decode($data);
+
+                storage::disk("services")->put($photo, $data);
 
                 $input["image"]=$photo;
             }       

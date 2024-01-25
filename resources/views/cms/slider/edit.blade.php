@@ -54,8 +54,7 @@
         <div class="form-group row">
             <label class="col-form-label text-left col-lg-3 col-sm-12">Status Slider</label>
             <div class="col-lg-9 col-md-9 col-sm-12">
-                <input data-switch="true" type="checkbox" {{ ($data->state) ? 'checked="checked"' : '' }} name="state"
-                />
+                <input data-switch="true" type="checkbox" {{ ($data->state) ? 'checked="checked"' : '' }} name="state"/>
             </div>
         </div>
     </div>
