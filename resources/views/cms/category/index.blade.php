@@ -9,15 +9,26 @@
 @endsection
 @section('content')
 <div class="row list-item">
-    @foreach($data as $item)
-    <!--begin::Column-->
-    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6" data-route="item-data-{{ $item->id }}">
-        <!--begin::Card-->
-        <div class="card card-custom gutter-b card-stretch">
-            <!--begin::Body-->
-            <div class="card-body text-center pt-4">
-                <!--begin::Toolbar-->
-                <div class="d-flex justify-content-end">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Slug</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($data as $item)
+            <tr data-route="item-data-{{ $item->id }}">
+                <th scope="row">1</th>
+                <td>{{ $item->name }}</td>
+                <td>
+                    <span class="label label-inline label-light-primary font-weight-bold">
+                        {{ $item->slug }}
+                    </span>
+                </td>
+                <td>
                     <div class="dropdown dropdown-inline">
                         <a href="#" class="btn btn-clean btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -27,7 +38,7 @@
                             <!--begin::Navigation-->
                             <ul class="navi navi-hover">
                                 <li class="navi-item">
-                                    <a href="{{ route('cms.category.edit', $item->id) }}" class="navi-link">
+                                    <a href="{{ route('cms.service.edit', $item->id) }}" class="navi-link">
                                         <span class="navi-text">
                                             Edit
                                         </span>
@@ -35,7 +46,7 @@
                                 </li>
                                 <li class="navi-item">
                                     <a class="navi-link delete"
-                                        data-route="{{ route('cms.category.destroy', $item->id) }}">
+                                        data-route="{{ route('cms.service.destroy', $item->id) }}">
                                         <span class="navi-text text-danger">
                                             Delete
                                         </span>
@@ -45,28 +56,11 @@
                             <!--end::Navigation-->
                         </div>
                     </div>
-                </div>
-                <!--end::Toolbar-->
-                <div class="mt-7">
-                    <img src="{{ asset('storage/beritas/'.$item->image) }}" alt="image" class="image-berita rounded">
-                </div>
-                <div class="my-4">
-                    <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4">{{ $item->name }}</a>
-                </div>
-                <!--end::Name-->
-                <!--begin::Label-->
-                <span
-                    class="btn btn-text btn-light-{{ ($item->state) ? 'success' : 'danger'}} btn-sm font-weight-bold">{{
-                    ($item->state) ? 'Active' : 'Not
-                    Active' }}</span>
-                <!--end::Label-->
-            </div>
-            <!--end::Body-->
-        </div>
-        <!--end::Card-->
-    </div>
-    <!--end::Column-->
-    @endforeach
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 </div>
 
 @endsection
