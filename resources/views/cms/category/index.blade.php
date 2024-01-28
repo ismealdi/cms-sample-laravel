@@ -8,7 +8,7 @@
 
 @endsection
 @section('content')
-<div class="row list-item">
+<div class="row list-item bg-white">
     <table class="table table-hover">
         <thead>
             <tr>
