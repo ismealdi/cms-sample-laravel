@@ -17,7 +17,6 @@ class CategoryController extends CmsController
     }
 
     public function index()
-
     {
         $data = $this->categoryRepository->all();
 
@@ -55,17 +54,16 @@ class CategoryController extends CmsController
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category)
+    public function edit(String $id)
     {
         $data = $this->categoryRepository->find($id);
-
         return view('cms.category.edit', compact('data'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, string $id)
     {
         $input = $request->all();
         $slider = $this->categoryRepository->update($input, $id);
@@ -76,7 +74,7 @@ class CategoryController extends CmsController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $id)
+    public function destroy(string $id)
     {
         $data = $this->categoryRepository->find($id);
 

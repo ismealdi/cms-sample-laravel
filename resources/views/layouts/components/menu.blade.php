@@ -61,12 +61,12 @@
             <ul class="menu-subnav">
                 <li class="menu-item menu-item-activex" aria-haspopup="true">
                     <a href="{{ route('cms.category.index') }}" class="menu-link">
-                        <span class="menu-text">Berita</span><span class="menu-desc"></span>
+                        <span class="menu-text">Katagori</span><span class="menu-desc"></span>
                     </a>
                 </li>
                 <li class="menu-item " aria-haspopup="true">
-                    <a href="{{ route('cms.category.index') }}" class="menu-link ">
-                        <span class="menu-text">Artikel</span><span class="menu-desc"></span>
+                    <a href="{{ route('cms.news.index') }}" class="menu-link ">
+                        <span class="menu-text">Berita</span><span class="menu-desc"></span>
                     </a>
                 </li>
                 <li class="menu-item " aria-haspopup="true">

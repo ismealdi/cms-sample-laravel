@@ -5,7 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class News extends AppBaseModel
+class News extends Model
 {
-    use HasFactory;
+    public $table = 'news';
+
+    public $fillable = [
+        'title',
+        'banner',
+        'post-date',
+        'category_id',
+        'content',
+        'slaug'
+    ];
+
+
 }

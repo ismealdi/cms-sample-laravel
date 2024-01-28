@@ -2,7 +2,7 @@
 @section('title', 'News')
 @section('subheader', true)
 @section('buttons')
-<a href="{{ route('cms.category.create') }}" class="btn btn-light-primary font-weight-bold ml-2">Add berita</a>
+<a href="{{ route('cms.news.create') }}" class="btn btn-light-primary font-weight-bold ml-2">Add berita</a>
 @endsection
 @section('pagination-sample')
 
@@ -23,10 +23,10 @@
                 @foreach($data as $item)
                 <tr data-route="item-data-{{ $item->id }}">
                     <th scope="row">1</th>
-                    <td>{{ $item->name }}</td>
+                    <td>{{ $item->title }}</td>
                     <td>
                         <span class="label label-inline label-light-primary font-weight-bold">
-                            {{ $item->slug }}
+                            {{ $item->slaug }}
                         </span>
                     </td>
                     <td>
@@ -39,7 +39,7 @@
                                 <!--begin::Navigation-->
                                 <ul class="navi navi-hover">
                                     <li class="navi-item">
-                                        <a href="{{ route('cms.category.edit', $item->id) }}" class="navi-link">
+                                        <a href="{{ route('cms.news.edit', $item->id) }}" class="navi-link">
                                             <span class="navi-text">
                                                 Edit
                                             </span>
@@ -47,7 +47,7 @@
                                     </li>
                                     <li class="navi-item">
                                         <a class="navi-link delete"
-                                            data-route="{{ route('cms.category.destroy', $item->id) }}">
+                                            data-route="{{ route('cms.news.destroy', $item->id) }}">
                                             <span class="navi-text text-danger">
                                                 Delete
                                             </span>
