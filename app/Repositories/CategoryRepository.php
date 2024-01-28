@@ -26,13 +26,15 @@ class CategoryRepository extends BaseRepository
         return Category::class;
     }
     public function create(array $input): Category {
+        $input["slug"] = str_replace(" ", "-", strtolower($input["name"]));
+        
         $model = $this->model->newInstance($input);
         $model->save();
 
         return $model;
     }
     public function update(array $input, string $id): Category {
-        
+        $input["slug"] = str_replace(" ", "-", strtolower($input["name"]));
 
         $query = $this->model->newQuery();
         $model = $query->findOrFail($id);
