@@ -14,11 +14,10 @@
         <div class="card-toolbar">
         </div>
     </div>
-
     {!! Form::model($data, array('route' => array('cms.slider.update', $data->id, 'class' =>
     'form'))) !!}
     @method('PUT')
-
+    
     <div class="card-body">
         <div class="form-group row">
             <div class="col-lg-12">
@@ -74,8 +73,6 @@
 @push('script')
 <script>
     var avatar2 = new KTImageInput('image_file');
-
-
     var KTBootstrapSwitch = function () {
         // Private functions
         var demos = function () {

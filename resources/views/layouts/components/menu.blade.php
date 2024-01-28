@@ -42,7 +42,7 @@
     <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
         <a href="javascript:;" class="menu-link menu-toggle">
             <span class="menu-text">
-                News
+                CMS Promkes
                 <span
                     class="icon-arrow svg-icon svg-icon-primary svg-icon-1.5x"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo9\dist/../src/media/svg/icons\Navigation\Angle-right.svg--><svg
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -60,13 +60,18 @@
         <div class="menu-submenu menu-submenu-classic menu-submenu-left">
             <ul class="menu-subnav">
                 <li class="menu-item menu-item-activex" aria-haspopup="true">
-                    <a href="{{ route('cms.slider.index') }}" class="menu-link">
-                        <span class="menu-text">Article</span><span class="menu-desc"></span>
+                    <a href="{{ route('cms.category.index') }}" class="menu-link">
+                        <span class="menu-text">Berita</span><span class="menu-desc"></span>
                     </a>
                 </li>
                 <li class="menu-item " aria-haspopup="true">
-                    <a href="{{ route('cms.service.index') }}" class="menu-link ">
-                        <span class="menu-text">Activity</span><span class="menu-desc"></span>
+                    <a href="{{ route('cms.category.index') }}" class="menu-link ">
+                        <span class="menu-text">Artikel</span><span class="menu-desc"></span>
+                    </a>
+                </li>
+                <li class="menu-item " aria-haspopup="true">
+                    <a href="{{ route('cms.category.index') }}" class="menu-link ">
+                        <span class="menu-text">Pengumuman</span><span class="menu-desc"></span>
                     </a>
                 </li>
             </ul>

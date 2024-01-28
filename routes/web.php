@@ -24,6 +24,7 @@ Route::namespace('CMS')->prefix('cms')->as('cms.')->middleware('auth')->group(fu
     Route::resource('service', 'ServiceController');
     Route::resource('slider', 'SliderController');
     Route::resource('information', 'InformationController');
+    Route::resource('category', 'CategoryController');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

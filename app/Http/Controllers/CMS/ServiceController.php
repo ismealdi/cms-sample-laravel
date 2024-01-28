@@ -40,6 +40,8 @@ class ServiceController extends CmsController
      */
     public function store(Request $request)
     {        
+        $request["state"] = (isset($request["state"])) ? 1 : 0;
+
         $input = $request->all();
         $service = $this->serviceRepsitory->create($input);
 
@@ -57,7 +59,7 @@ class ServiceController extends CmsController
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Service $service)
+    public function edit(string $id)
     {
         $data = $this->serviceRepsitory->find($id);
 
@@ -67,7 +69,7 @@ class ServiceController extends CmsController
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Service $service)
+    public function update(Request $request, string $id)
     {
         $request["state"] = (isset($request["state"])) ? 1 : 0;
 
@@ -80,7 +82,7 @@ class ServiceController extends CmsController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Service $service)
+    public function destroy(string $id)
     {
         $data = $this->serviceRepsitory->find($id);
 

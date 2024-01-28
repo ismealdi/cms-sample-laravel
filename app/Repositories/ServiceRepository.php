@@ -12,6 +12,7 @@ class ServiceRepository extends BaseRepository
     protected $fieldSearchable =[
         'name',
         'image'
+
     ];
 
     public function getFieldsSearchable(): array{
@@ -38,7 +39,8 @@ class ServiceRepository extends BaseRepository
                 $model->update(["image"=> $photo]);
             }       
         }
-        return $model;
+        
+       return $model;
     }
 
     public function update(array $input, string $id): Service{

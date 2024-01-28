@@ -1,8 +1,8 @@
 @extends('layouts.app')
-@section('title', 'Service')
+@section('title', 'News')
 @section('subheader', true)
 @section('buttons')
-<a href="{{ route('cms.service.create') }}" class="btn btn-light-primary font-weight-bold ml-2">Add Service</a>
+<a href="{{ route('cms.category.create') }}" class="btn btn-light-primary font-weight-bold ml-2">Add berita</a>
 @endsection
 @section('pagination-sample')
 
@@ -27,7 +27,7 @@
                             <!--begin::Navigation-->
                             <ul class="navi navi-hover">
                                 <li class="navi-item">
-                                    <a href="{{ route('cms.service.edit', $item->id) }}" class="navi-link">
+                                    <a href="{{ route('cms.category.edit', $item->id) }}" class="navi-link">
                                         <span class="navi-text">
                                             Edit
                                         </span>
@@ -35,7 +35,7 @@
                                 </li>
                                 <li class="navi-item">
                                     <a class="navi-link delete"
-                                        data-route="{{ route('cms.service.destroy', $item->id) }}">
+                                        data-route="{{ route('cms.category.destroy', $item->id) }}">
                                         <span class="navi-text text-danger">
                                             Delete
                                         </span>
@@ -48,7 +48,7 @@
                 </div>
                 <!--end::Toolbar-->
                 <div class="mt-7">
-                    <img src="{{ asset('storage/services/'.$item->image) }}" alt="image" class="image-slider rounded">
+                    <img src="{{ asset('storage/beritas/'.$item->image) }}" alt="image" class="image-berita rounded">
                 </div>
                 <div class="my-4">
                     <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4">{{ $item->name }}</a>
