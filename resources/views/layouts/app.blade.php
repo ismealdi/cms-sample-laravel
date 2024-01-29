@@ -180,6 +180,8 @@
 <script src='{{ url("assets/plugins/global/plugins.bundle.js") }}'></script>
 <script src='{{ url("assets/plugins/custom/prismjs/prismjs.bundle.js") }}'></script>
 <script src='{{ url("assets/js/scripts.bundle.js") }}'></script>
+<script
+    src='https://cdn.tiny.cloud/1/qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc/tinymce/5-stable/tinymce.min.js'></script>
 <script src='{{ url("js/setalis.js") }}'></script>
 
 @stack('script')

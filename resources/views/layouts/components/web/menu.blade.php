@@ -1,5 +1,5 @@
 <ul class="dropdown">
-    <li class="{{ (Request::is('about*') ? 'active' : '') }}"><a href="{{url('/profile')}}">Tentang Kami</a> 
+    <li class="{{ (Request::is('about*') ? 'active' : '') }}"><a href="{{url('/profile')}}">Tentang Kami</a>
     </li>
 
     <li><a href="#">Layanan</a>
@@ -9,26 +9,26 @@
             <li><a href="{{url('/ruangmelati')}}">Rawat Inap</a></li>
             <li><a href="#">MCU</a></li>
             <li><a href="#">Poliklinik Eksekutif</a></li>
-        </ul> 
+        </ul>
     </li>
-   
+
     <li><a href="#">Berita</a>
         <ul>
-            <li><a href="{{url('/informasi')}}">Informasi Kesehatan</a></li>
-            <li><a href="{{url('/artikel')}}">Artikel Kesehatan </a></li>
-            <li><a href="{{url('/pengumuman')}}">pengumuman</a></li>
-            <li><a href="{{url('/kegiatan')}}">Kegiatan</a></li>
-            
+            @foreach(\App\Models\Category::all() as $item)
+            <li><a href="{{url('/berita/'.$item->slug )}}">{{ $item->name }}</a></li>
+            @endforeach
+            <li><a href="{{url('/berita/' )}}">Semua</a></li>
+
         </ul>
     </li>
     <li><a href="#">Informasi Publik</a>
         <ul>
             <li><a href="#">Pendaftaran Online</a>
-            <ul>
+                <ul>
                     <li><a href="#">Pendaftaran Pasien</a></li>
                     <li><a href="#">Pendaftaran Melalui WA</a></li>
                     <li><a href="#">Tempat Tidur Online </a></li>
-                   
+
                 </ul>
             <li><a href="#">Jadwal Dokter </a></li>
             <li><a href="#">Konsultasi Dokter</a></li>
@@ -54,6 +54,6 @@
             <li><a href="#">LAKSA</a></li>
             <li><a href="#">SIAP Kemenkes</a></li>
             <li><a href="#">SP4N Lapor</a></li>
-        </ul> 
+        </ul>
     </li>
 </ul>

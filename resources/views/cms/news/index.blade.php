@@ -16,19 +16,22 @@
                     <th scope="col">No</th>
                     <th scope="col">Name</th>
                     <th scope="col">Slug</th>
+                    <th scope="col">Category</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($data as $item)
                 <tr data-route="item-data-{{ $item->id }}">
-                    <th scope="row">1</th>
+                    <th scope="row">{{ $loop->index+1 }}</th>
                     <td>{{ $item->title }}</td>
                     <td>
                         <span class="label label-inline label-light-primary font-weight-bold">
                             {{ $item->slaug }}
                         </span>
                     </td>
+                    <td>{{ $item->category->name }}</td>
+
                     <td>
                         <div class="dropdown dropdown-inline">
                             <a href="#" class="btn btn-clean btn-hover-light-primary btn-sm btn-icon"

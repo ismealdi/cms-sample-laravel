@@ -3,17 +3,20 @@
 namespace App\Http\Controllers\CMS;
 
 use App\Models\News;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\NewsRequest;
 use App\Repositories\NewsRepository;
+use App\Repositories\CategoryRepository;
 
 class NewsController extends CmsController
 {
-    private $newsRepository;        
+    private $newsRepository, $categoryRepository;        
     
-    public function __construct(newsRepository $newsRepo) {
+    public function __construct(NewsRepository $newsRepo, CategoryRepository $categoryRepo) {
         $this->middleware('auth');
         $this->newsRepository = $newsRepo;
+        $this->categoryRepository = $categoryRepo;
     }
 
     /**
@@ -31,7 +34,8 @@ class NewsController extends CmsController
      */
     public function create()
     {
-        return view('cms.news.create');
+        $categories = $this->categoryRepository->all();
+        return view('cms.news.create', compact('categories'));
     }
 
     /**
@@ -41,6 +45,8 @@ class NewsController extends CmsController
     {
         $input = $request->all();
         $news = $this->newsRepository->create($input);
+
+        return dd($input);
 
         return redirect()->route('cms.news.index');
     }
@@ -58,9 +64,10 @@ class NewsController extends CmsController
      */
     public function edit(string $id)
     {
+        $categories = $this->categoryRepository->all();
         $data = $this->newsRepository->find($id);
 
-        return view('cms.news.edit', compact('data'));
+        return view('cms.news.edit', compact('data','categories'));
     }
 
     /**

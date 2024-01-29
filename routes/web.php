@@ -31,6 +31,7 @@ Route::namespace('CMS')->prefix('cms')->as('cms.')->middleware('auth')->group(fu
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [App\Http\Controllers\WebController::class, 'home'])->name('web.home');
+Route::get('/berita/{slug?}', [App\Http\Controllers\WebController::class, 'berita'])->name('web.berita');
 
 
 Route::get('/profile', function () {

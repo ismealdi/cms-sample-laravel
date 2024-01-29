@@ -17,97 +17,200 @@
     {!! Form::model($data, array('route' => array('cms.news.update', $data->id, 'class' =>
     'form'))) !!}
     @method('PUT')
-    
+
     <div class="card-body">
-        <div class="form-group row">
-            <div class="col-lg-12">
-                <label>Name:</label>
-                {!! Form::text('title', null, ['class' => 'form-control', 'required',
-                'placeholder' => 'Enter berita Name']) !!}
-                <span class="form-text text-muted">Please enter your berita name</span>
+        <div class="card-body">
+            <div class="form-group row">
+                <div class="col-lg-6">
+                    <label>Name:</label>
+                    <input type="text" name="title" value="{{ $data->title }}" class="form-control"
+                        placeholder="Enter berita Name" required />
+                    <span class="form-text text-muted">Please enter your news name</span>
+                </div>
+                <div class="col-lg-6">
+                    <label>Kategori:</label>
+                    <select class="form-control selectpicker" name="category_id">
+                        @foreach($categories as $category)
+                        <option value="{{ $category->id }}" {{ ($category->id == $data->category_id) ? 'selected' : ''
+                            }}>{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
             </div>
+            <div class="form-group row">
+                <div class="col-lg-12">
+                    <label>Konten:</label>
+                    <textarea id="open-source-plugins" name="content" class="tox-target">{{$data->content}}</textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <input type="hidden" name="image_file" id="image_base64" />
+                <div class="col-lg-12">
+                    <label>Banner</label><br />
+                    <div class="image-input w-100" id="image_file">
+                        <div class="image-input-wrapper"
+                            style="background-color: whitesmoke !important; min-width: 100%;height: 240px;object-position: center;">
+                        </div>
+                        <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
+                            data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
+                            <i class="fa fa-pen icon-sm text-muted"></i>
+                            <input type="file" name="profile_avatar" id="profile_avatar" accept=".png, .jpg, .jpeg" />
+                            <input type="hidden" name="profile_avatar_remove" id="profile_remove" />
+                        </label>
+
+                        <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
+                            id="image_remove" data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                            <i class="ki ki-bold-close icon-xs text-muted"></i>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <a href="{{ route('cms.news.index') }}" type="reset" class="btn btn-secondary">Cancel</a>
+                    </div>
+                    <div class="col-lg-6 text-lg-right">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-        <div class="form-group row">
-            <div class="col-lg-12">
-                <label>Konten:</label>
-                {!! Form::hidden('content', null, ['class' => 'form-control', 'id' => 'content',
-                'placeholder' => 'Enter berita Name']) !!}
-                <div id="kt_quil_2" style="height: 325px">
-                    
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="{{ route('cms.news.index') }}" type="reset" class="btn btn-secondary">Cancel</a>
+                </div>
+                <div class="col-lg-6 text-lg-right">
+                    <button type="submit" class="btn btn-primary">Save</button>
                 </div>
             </div>
         </div>
-        
-        
+        {!! Form::close() !!}
     </div>
-    <div class="card-footer">
-        <div class="row">
-            <div class="col-lg-6">
-                <a href="{{ route('cms.news.index') }}" type="reset" class="btn btn-secondary">Cancel</a>
-            </div>
-            <div class="col-lg-6 text-lg-right">
-                <button type="submit" class="btn btn-primary">Save</button>
-            </div>
-        </div>
-    </div>
-    {!! Form::close() !!}
-</div>
-@endsection
+    @endsection
 
-@push('script')
-<script>
-// Class definition
-var KTQuilDemos = function() {
+    @push('script')
+    <script>
+        var KTBootstrapSelect = function () {
 
-// Private functions
-var demo2 = function() {
+            // Private functions
+            var demos = function () {
+                // minimum setup
+                $('.kt-selectpicker').selectpicker();
+            }
 
-    
-    var Delta = Quill.import('delta');
-    var quill = new Quill('#kt_quil_2', {
-        modules: {
-            toolbar: true
-        },
-        placeholder: 'Type your text here...',
-        theme: 'snow'
-    });
+            return {
+                // public functions
+                init: function () {
+                    demos();
+                }
+            };
+        }();
 
-    // Store accumulated changes
-    var change = new Delta();
-    quill.on('text-change', function(delta) {
-        change = change.compose(delta);
-    });
+        var useDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    // Save periodically
-    setInterval(function() {
-        if (change.length() > 0) {
-            console.log('Saving changes', change);
-            $("#content").val(JSON.stringify(quill.getContents()));
-            
-            change = new Delta();
+        tinymce.init({
+            selector: 'textarea#open-source-plugins',
+            plugins: 'print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap quickbars emoticons',
+            imagetools_cors_hosts: ['picsum.photos'],
+            menubar: 'file edit view insert format tools table help',
+            toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
+            toolbar_sticky: true,
+            autosave_ask_before_unload: true,
+            autosave_interval: '30s',
+            autosave_prefix: '{path}{query}-{id}-',
+            autosave_restore_when_empty: false,
+            autosave_retention: '2m',
+            image_advtab: true,
+            link_list: [
+                { title: 'My page 1', value: 'https://www.tiny.cloud' },
+                { title: 'My page 2', value: 'http://www.moxiecode.com' }
+            ],
+            image_list: [
+                { title: 'My page 1', value: 'https://www.tiny.cloud' },
+                { title: 'My page 2', value: 'http://www.moxiecode.com' }
+            ],
+            image_class_list: [
+                { title: 'None', value: '' },
+                { title: 'Some class', value: 'class-name' }
+            ],
+            importcss_append: true,
+            file_picker_callback: function (callback, value, meta) {
+                /* Provide file and text for the link dialog */
+                if (meta.filetype === 'file') {
+                    callback('https://www.google.com/logos/google.jpg', { text: 'My text' });
+                }
+
+                /* Provide image and alt text for the image dialog */
+                if (meta.filetype === 'image') {
+                    callback('https://www.google.com/logos/google.jpg', { alt: 'My alt text' });
+                }
+
+                /* Provide alternative source and posted for the media dialog */
+                if (meta.filetype === 'media') {
+                    callback('movie.mp4', { source2: 'alt.ogg', poster: 'https://www.google.com/logos/google.jpg' });
+                }
+            },
+            templates: [
+                { title: 'New Table', description: 'creates a new table', content: '<div class="mceTmpl"><table width="98%%"  border="0" cellspacing="0" cellpadding="0"><tr><th scope="col"> </th><th scope="col"> </th></tr><tr><td> </td><td> </td></tr></table></div>' },
+                { title: 'Starting my story', description: 'A cure for writers block', content: 'Once upon a time...' },
+                { title: 'New list with dates', description: 'New List with dates', content: '<div class="mceTmpl"><span class="cdate">cdate</span><br /><span class="mdate">mdate</span><h2>My List</h2><ul><li></li><li></li></ul></div>' }
+            ],
+            template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
+            template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
+            height: 600,
+            image_caption: true,
+            quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
+            noneditable_noneditable_class: 'mceNonEditable',
+            toolbar_mode: 'sliding',
+            contextmenu: 'link image imagetools table',
+            skin: useDarkMode ? 'oxide-dark' : 'oxide',
+            content_css: useDarkMode ? 'dark' : 'default',
+            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+        });
+
+        var avatar2 = new KTImageInput('image_file');
+
+        document.querySelector("#image_remove").addEventListener("click", function (e) {
+            $("#image_base64").val("");
+        });
+
+        document.querySelector("#profile_avatar").onchange = async (e) => {
+            if (e.target.files[0] != null) {
+                var filename = e.target.files[0].name;
+                /* getting file extenstion eg- .jpg,.png, etc */
+                var extension = filename.substr(filename.lastIndexOf("."));
+                var allowedExtensionsRegx = /(\.jpg|\.jpeg|\.png)$/i;
+                var isAllowed = allowedExtensionsRegx.test(extension);
+
+                const fsize = e.target.files[0].size;
+                const file = Math.round((fsize / 1024));
+
+                if (isAllowed) {
+                    if (file <= 1096) {
+                        let b64Data = await getBase64(e.target.files[0]);
+                        $("#image_base64").val(b64Data);
+                    } else {
+                        e.target.value = '';
+                        console.log("Max file size is 1 MB");
+                        return false;
+                    }
+                } else {
+                    e.target.value = '';
+                    console.log("Please upload Image file");
+                    return false;
+                }
+            } else {
+                return false;
+            }
         }
-    }, 5 * 1);
 
-    // Check for unsaved data
-    window.onbeforeunload = function() {
-        if (change.length() > 0) {
-            return 'There are unsaved changes. Are you sure you want to leave?';
-        }
-    }
-    
-    quill.setContents(JSON.parse($("#content").val()));
-}
-
-return {
-    // public functions
-    init: function() {
-        demo2();
-    }
-};
-}();
-
-jQuery(document).ready(function() {
-KTQuilDemos.init();
-});
-</script>
-@endpush
+        jQuery(document).ready(function () {
+            KTBootstrapSelect.init();
+        });
+    </script>
+    @endpush
