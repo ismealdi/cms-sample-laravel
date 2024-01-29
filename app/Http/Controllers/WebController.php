@@ -20,6 +20,22 @@ class WebController extends Controller
         return view('pages.home', compact('sliders'));
     }
 
+    public function beritaDetail(string $slug, string $id = null) {
+        $category = null;
+
+        if(isset($slug)) {
+            $category = Category::whereSlug($slug)->first();
+        }
+        
+        $news = News::whereSlaug($id)->firstOrFail();
+
+        $popular = News::inRandomOrder()
+        ->limit(5)
+        ->get();
+        
+        return view('pages.article', compact('news', 'category', 'popular'));
+    }
+
     public function berita(string $slug = null) {
         $category = null;
 
@@ -34,7 +50,10 @@ class WebController extends Controller
         }
 
         $news = $news->paginate(6);
+        $popular = News::inRandomOrder()
+        ->limit(5)
+        ->get();
 
-        return view('pages.news', compact('news', 'category'));
+        return view('pages.news', compact('news', 'category', 'popular'));
     }
 }

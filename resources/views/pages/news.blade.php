@@ -70,7 +70,8 @@
                                             $article->category->name }}</span>
                                     </div>
                                     <header class="entry-header">
-                                        <h2 class="entry-title"><a href="{{ url('berita/detail/'.$article->slaug) }}">{{
+                                        <h2 class="entry-title"><a
+                                                href="{{ url('berita/'.$article->category->slug.'/'.$article->slaug) }}">{{
                                                 strip_tags($article->title) }}</a>
                                         </h2>
                                     </header>
@@ -83,7 +84,8 @@
                                         <div class="ttm-blogbox-footer-readmore">
                                             <div class="ttm-blogbox-footer-left">
                                                 <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-black"
-                                                    href="{{ url('berita/detail/'.$article->slaug) }}">READ MORE</a>
+                                                    href="{{ url('berita/'.$article->category->slug.'/'.$article->slaug) }}">READ
+                                                    MORE</a>
                                             </div>
                                         </div>
                                         <div class="ttm-social-share-wrapper">
@@ -128,21 +130,16 @@
                         <aside class="widget widget-recent-post">
                             <h3 class="widget-title">Popular News</h3>
                             <ul class="widget-post ttm-recent-post-list">
+                                @foreach($popular as $item)
                                 <li>
-                                    <a href="single-blog.html"><img src="images/blog/01.jpg" alt="post-img"></a>
-                                    <span class="post-date">April 1, 2019</span>
-                                    <a href="single-blog.html">How much aspirin to take for stroke</a>
+                                    <a href="{{ url('berita/'.$item->category->slug.'/'.$item->slaug) }}"><img
+                                            src="{{ asset('storage/services/'.$item->banner) }}" alt="post-img"></a>
+                                    <span class="post-date">{{
+                                        $item['post-date']->format('M d, Y') }}</span>
+                                    <a href="{{ url('berita/'.$item->category->slug.'/'.$item->slaug) }}">{{
+                                        $item->title }}</a>
                                 </li>
-                                <li>
-                                    <a href="single-blog.html"><img src="images/blog/02.jpg" alt="post-img"></a>
-                                    <span class="post-date">April 1, 2019</span>
-                                    <a href="single-blog.html">Implant Surgical equipment technology</a>
-                                </li>
-                                <li>
-                                    <a href="single-blog.html"><img src="images/blog/03.jpg" alt="post-img"></a>
-                                    <span class="post-date">April 05, 2019</span>
-                                    <a href="single-blog.html">The Benefits of Middle-Age Fitness</a>
-                                </li>
+                                @endforeach
                             </ul>
                         </aside>
 

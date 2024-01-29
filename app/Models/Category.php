@@ -15,6 +15,11 @@ class Category extends Model
        
     ];
 
+    public function countNews(): Int
+    {
+        return $this->hasMany(News::class, 'category_id','id')->count();
+    }
+
    
  
 }
