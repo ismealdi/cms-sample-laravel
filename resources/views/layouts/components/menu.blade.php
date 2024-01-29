@@ -32,7 +32,7 @@
                     </a>
                 </li>
                 <li class="menu-item" aria-haspopup="true">
-                    <a href="{{ route('cms.information.index') }}" class="menu-link ">
+                    <a href="{{ route('cms.layanan.index') }}" class="menu-link ">
                         <span class="menu-text">Information</span><span class="menu-desc"></span>
                     </a>
                 </li>

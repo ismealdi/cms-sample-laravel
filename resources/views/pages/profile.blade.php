@@ -99,24 +99,7 @@
                                     </div>
                                     
                                         </div><!-- toggle end -->
-                                        <!-- toggle -->
-                                        <div class="toggle">
-                                            <div class="toggle-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" >Our Vision</a></div>
-                                            <div class="toggle-content">
-                                                <div class="row">
-                                                    <div class="col-sm-3">
-                                                        <div class="toggle-figure res-991-mb-15">
-                                                            <img class="img-fluid" src="images/portfolio/post-two-1200x800.jpg" alt="image">
-                                                        </div>
-                                                        
-                                                    </div>
-                                                    <div class="col-sm-9">
-                                                        <p>Our Clinic has grown to provide a world class facility for the treatment of tooth loss, dental cosmetics and bore advanced restorative dentistry. We are among the most qualified implant providers in the AUS with over 30 years of quality training and experience.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><!-- toggle end -->
-                                        <!-- toggle -->
+                                      
                                         <div class="toggle">
                                             <div class="toggle-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" >Sejarah</a></div>
                                             <div class="toggle-content">
@@ -248,11 +231,11 @@
                                                         </div>
                                                         <div class="toggle-figure res-991-mb-15 py-1">
                                                             
-                                                            <a href="#gambar-2">
+                                                            <a href="#gambar-5">
                                                                  <img class="img-fluid" src="images/portfolio/struk.jpg" alt="image">
                                                             </a>
                                                   
-                                                                <div class="overlay" id="gambar-2">
+                                                                <div class="overlay" id="gambar-5">
                                                                     <div>
                                                                         <a href="#!" class="close"><svg style="width:47px;height:47px" viewBox="0 0 24 24">
                                                                         <path fill="currentColor" d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z" />
@@ -301,17 +284,129 @@
                                                     </div>                                                    
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="toggle">
+                                            <div class="toggle-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" >Direksi </a></div>
+                                            <div class="toggle-content">
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <div class="toggle-figure res-991-mb-15">
+                                                            <img class="img-fluid" src="images/portfolio/dirut.png" alt="image">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                    <div class="row">
+                                                    <div class="col-4section-title res-991-pt-30">
+                                                                <h2 class="text-left fs-5">Biodata Direktur Utama</h2>
+                                                            </div>  
+                                                        <div class="col col-sm"><h6><li>ALAMAT : Jalan Raya Puncak KM. 83 Po Box 28 Cisarua 16750 Bogor Jawa Barat </li></h6></div>
+                                                        <div class="w-100"></div>
+                                                        <div class="col col-sm"><h6><li>JABATAN : Direktur Utama </li></h6></div>
+                                                        <div class="w-100"></div> 
+                                                        <div class="col col-sm"><h6><li>NAMA : dr . Ida Bagus Sila Wiweka Sp.P (K), MARS </li></h6></div>
+                                                        <div class="w-100"></div> 
+                                                        <div class="col col-sm"><h6><li>NOMOR TLP : 0251 8253630, 8257663 </li></h6></div>
+                                                        <div class="w-100"></div> 
+                                                        <div class="col col-sm"><h6><li>PENDIDIKAN TERAKHIR : S2. Magister Administrasi Managemen Rumah Sakit </li></h6></div>
+                                                        
+                                                                     
+                                                </div>
+                                            </div>
+                                            <div class="row py-2">
+                                                    <div class="col-sm-2">
+                                                        <div class="toggle-figure res-991-mb-15">
+                                                            <img class="img-fluid" src="images/portfolio/dirmed.png" alt="image">
+                                                        </div>
+                                                        
+                                                    </div>
+                                            <div class="col-sm-9">
+                                                    <div class="row ">
+                                                    <div class="col-4section-title res-991-pt-30">
+                                                                <h2 class="text-left fs-5"> Direktur Medik Keperawatan</h2>
+                                                            </div>  
+                                                        <div class="col col-sm "><h6><li>ALAMAT : Jalan Raya Puncak KM. 83 Po Box 28 Cisarua 16750 Bogor Jawa Barat </li></h6></div>
+                                                        <div class="w-100"></div>
+                                                        <div class="col col-sm"><h6><li>JABATAN : Direktur Medik Keperawatan  </li></h6></div>
+                                                        <div class="w-100"></div> 
+                                                        <div class="col col-sm"><h6><li>NAMA : dr. Ni Luh Dharma Kerti Natih,MHSM </li></h6></div>
+                                                        <div class="w-100"></div> 
+                                                        <div class="col col-sm"><h6><li>NOMOR TLP : 0251 8253630, 8257663 </li></h6></div>
+                                                        <div class="w-100"></div> 
+                                                        <div class="col col-sm"><h6><li>PENDIDIKAN TERAKHIR : S2. Magister Manajemen Layanan Kesehatan </li></h6></div>
+                                                        
+                                                                     
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                                    <div class="col-sm-2">
+                                                        <div class="toggle-figure res-991-mb-15">
+                                                            <img class="img-fluid" src="images/portfolio/dirpklo.png" alt="image">
+                                                        </div>
+                                                        
+                                                    </div>
+                                            <div class="col-sm-9">
+                                                    <div class="row ">
+                                                    <div class="col-4section-title res-991-pt-30">
+                                                                <h2 class="text-left fs-5"> Direktur Perencanaan dan Keuangan Layanan</h2>
+                                                            </div>  
+                                                        <div class="col col-sm "><h6><li>ALAMAT : Jalan Raya Puncak KM. 83 Po Box 28 Cisarua 16750 Bogor Jawa Barat </li></h6></div>
+                                                        <div class="w-100"></div>
+                                                        <div class="col col-sm"><h6><li>JABATAN : Direktur Perencanaan dan Keuangan Layanan  </li></h6></div>
+                                                        <div class="w-100"></div> 
+                                                        <div class="col col-sm"><h6><li>NAMA : Muhamad Nur Ihwan, SE, M.Ak </li></h6></div>
+                                                        <div class="w-100"></div> 
+                                                        <div class="col col-sm"><h6><li>NOMOR TLP : 0251 8253630, 8257663 </li></h6></div>
+                                                        <div class="w-100"></div> 
+                                                        <div class="col col-sm"><h6><li>PENDIDIKAN TERAKHIR : S2. Magister Akutansi</li></h6></div>
+                                                        
+                                                                     
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row py-2">
+                                                    <div class="col-sm-2">
+                                                        <div class="toggle-figure res-991-mb-15">
+                                                            <img class="img-fluid" src="images/portfolio/dirsdm.png" alt="image">
+                                                        </div>
+                                                        
+                                                    </div>
+                                            <div class="col-sm-9">
+                                                    <div class="row ">
+                                                    <div class="col-4section-title res-991-pt-30">
+                                                                <h2 class="text-left fs-5"> Direktur Sumber Daya Manusia dan Pendidikan</h2>
+                                                            </div>  
+                                                        <div class="col col-sm "><h6><li>ALAMAT : Jalan Raya Puncak KM. 83 Po Box 28 Cisarua 16750 Bogor Jawa Barat </li></h6></div>
+                                                        <div class="w-100"></div>
+                                                        <div class="col col-sm"><h6><li>JABATAN : Direktur Sumber Daya Manusia dan Pendidikan  </li></h6></div>
+                                                        <div class="w-100"></div> 
+                                                        <div class="col col-sm"><h6><li>NAMA : dr.Ganda Raja Partogi Sinaga, MKM </li></h6></div>
+                                                        <div class="w-100"></div> 
+                                                        <div class="col col-sm"><h6><li>NOMOR TLP : 0251 8253630, 8257663 </li></h6></div>
+                                                        <div class="w-100"></div> 
+                                                        <div class="col col-sm"><h6><li>PENDIDIKAN TERAKHIR : S.2 Magister Kesehatan Masyarakat</li></h6></div>
+                                                        
+                                                                     
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
                                         </div><!-- toggle end -->
+                                    </div>
+                                    </div>
+
+                                        </div><!-- toggle end -->
+                                    </div>
+                                    </div>
+                                    
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div><!-- row end -->
-            </div>
-     
-        <!-- experiance-section end -->
-
+                  
+      
         <!-- fid-section -->
        
         <section class="ttm-row fid-section ttm-bg ttm-bgcolor-skincolor clearfix">
@@ -407,8 +502,7 @@
         <!--team-section-->
         
     <!--footer end-->
-
-
+  
 </div><!-- page end -->
 
 
