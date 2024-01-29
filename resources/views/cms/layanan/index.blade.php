@@ -31,12 +31,9 @@
                         </span>
                     </td>
                     <td>
-                        <span class="font-weight-bold">
-                            <div class="image-input image-input-outline" id="kt_image_1">
-                                <div class="image-input-wrapper" style="background-image: url(assets/media/users/100_1.jpg)"></div>
-                            </div>
-                        </span>
-
+                    
+                     <div class="image-input-wrapper" src="{{ asset('storage/layanan/'.$item->image) }}" alt="image"></div>
+        
                     </td>
                     <td>
                         <div class="dropdown dropdown-inline">
