@@ -119,4 +119,11 @@ Route::get('/pelatihan', function () {
     return view('pages.pelatihan');
 });
 
+Route::get('/laporan', function () {
+    return view('pages.laporan');
+});
+Route::get('/filelaporan', function () {
+    return view('pages.filelaporan');
+});
+
 

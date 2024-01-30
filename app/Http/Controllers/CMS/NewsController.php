@@ -46,8 +46,6 @@ class NewsController extends CmsController
         $input = $request->all();
         $news = $this->newsRepository->create($input);
 
-        return dd($input);
-
         return redirect()->route('cms.news.index');
     }
 

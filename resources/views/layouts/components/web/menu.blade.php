@@ -36,8 +36,7 @@
             <li><a href="#">Karir</a></li>
             <li><a href="#">Reservasi Gedung</a></li>
             <li><a href="#">Jam Kunjungan Pasien</a></li>
-            <li><a href="#">Panduan masuk dan Akses</a></li>
-            <li><a href="#">Syarat-syarat Pasien/jamninan</a></li>
+            <li><a href="{{url('/laporan')}}">Laporan</a></li>
         </ul>
     </li>
     <li><a href="#">Diklat</a>
