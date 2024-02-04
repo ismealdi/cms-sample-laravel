@@ -6,25 +6,34 @@ use App\Models\Layanan;
 use App\Repositories\BaseRepository;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Carbon\Carbon;
 
+//use Your Model
+
+/**
+ * Class LayananRepository.
+ */
 class LayananRepository extends BaseRepository
 {
     protected $fieldSearchable =[
-        'name',
-        'konten',
-        'image'
-
+        'title',
+        'banner',
+        'category_id',
+        'content',
+        'slaug'
     ];
 
-    public function getFieldsSearchable(): array{
+    public function getFieldsSearchable(): array {
         return $this->fieldSearchable;
     }
-
     public function model(): string{
         return Layanan::class;
     }
 
-    public function create(array $input): Layanan{
+    public function create(array $input): Layanan {
+        $input["slaug"] = str_replace(" ", "-", strtolower($input["title"]));
+        
+
         $model = $this->model->newInstance($input);
         $model->save();
 
@@ -35,16 +44,15 @@ class LayananRepository extends BaseRepository
                 $data = substr($base64_image, strpos($base64_image, ',')+1);
                 $data = base64_decode($data);
 
-                storage::disk("layanans") ->put($photo, $data);
+                storage::disk("services") ->put($photo, $data);
 
-                $model->update(["image"=> $photo]);
+                $model->update(["banner"=> $photo]);
             }       
         }
-        
-       return $model;
-    }
 
-    public function update(array $input, string $id): Layanan{
+        return $model;
+    }
+    public function update(array $input, string $id): Layanan {
         if(isset($input['image_file'])) {
             $base64_image = $input["image_file"];
             if (preg_match('/^data:image\/(\w+);base64,/', $base64_image)) {
@@ -52,11 +60,13 @@ class LayananRepository extends BaseRepository
                 $data = substr($base64_image, strpos($base64_image, ',') + 1);
                 $data = base64_decode($data);
 
-                storage::disk("layanans")->put($photo, $data);
+                storage::disk("services")->put($photo, $data);
 
-                $input["image"]=$photo;
+                $input["banner"]=$photo;
             }       
         }
+
+        $input["slaug"] = str_replace(" ", "-", strtolower($input["title"]));
 
         $query = $this->model->newQuery();
         $model = $query->findOrFail($id);
@@ -65,20 +75,16 @@ class LayananRepository extends BaseRepository
 
         return $model;
     }
-    
-    public function delete( string $id){
+    public function delete(string $id) {        
         $query = $this->model->newQuery();
         $model = $query->findOrFail($id);
 
-        $filepath = storage_path('App/public/layanans', $model->image);
+        $filepath = storage_path('app/public/services/'.$model->banner);
 
-        if(File::exists($filepath)){
-            file::delete($filepath);
+        if(File::exists($filepath)) {
+            File::delete($filepath);
         }
 
         return $model->delete();
-    }    
-
-
+    }
 }
-

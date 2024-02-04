@@ -4,7 +4,7 @@
 @section('buttons')
 <a href="{{ route('cms.slider.create') }}" class="btn btn-light-primary font-weight-bold ml-2">Add Slider</a>
 @endsection
-@section('pagination-sample')
+@section('pagination')
 
 @endsection
 @section('content')

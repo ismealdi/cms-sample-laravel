@@ -3,24 +3,28 @@
 namespace App\Http\Controllers\CMS;
 
 use App\Models\Layanan;
+use App\Models\Clayanan;
 use Illuminate\Http\Request;
+use App\Http\Requests\NewsRequest;
+use App\Repositories\ClayananRepository;
 use App\Repositories\LayananRepository;
-use Dflydev\DotAccessData\Data;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\File;
+
 
 class LayananController extends CmsController
 {
-    private $layananRepository;
-
-    public function __construct(LayananRepository $servicerepo) {
+    private $layananRepository, $clayananRepository;        
+    
+    public function __construct(LayananRepository $layananRepo, ClayananRepository $clayananRepo) {
         $this->middleware('auth');
-        $this->layananRepository = $servicerepo;
+        $this->layananRepository = $layananRepo;
+        $this->clayananRepository = $clayananRepo;
     }
-        public function index()
+    
+    public function index()
     {
-        $data= $this->layananRepository->all();
-        return view('cms.layanan.index', compact('data'));   //
+        $data = $this->layananRepository->all();
+
+        return view('cms.layanan.index', compact('data'));
     }
 
     /**
@@ -28,7 +32,9 @@ class LayananController extends CmsController
      */
     public function create()
     {
-        return view('cms.layanan.create');    }
+        $clayanans = $this->clayananRepository->all();
+        return view('cms.layanan.create', compact('clayanans'));
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -54,9 +60,10 @@ class LayananController extends CmsController
      */
     public function edit(string $id)
     {
+        $clayanans = $this->clayananRepository->all();
         $data = $this->layananRepository->find($id);
 
-        return view('cms.layanan.edit', compact('data'));
+        return view('cms.layanan.edit', compact('data','clayanans'));
     }
 
     /**
@@ -66,9 +73,8 @@ class LayananController extends CmsController
     {
         $input = $request->all();
         $layanan = $this->layananRepository->update($input, $id);
-
-        return redirect()->route('cms.layanan.index');   
-     }
+        return redirect()->route('cms.layanan.index');
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -77,10 +83,13 @@ class LayananController extends CmsController
     {
         $data = $this->layananRepository->find($id);
 
-        if (empty($data)){
+        if (empty($data)) {
             return $this->sendError('data not found');
         }
+
         $this->layananRepository->delete($id);
-        return $this->sendSuccess('Data deleted succesfully');
+
+        return $this->sendSuccess('Data deleted successfully');
     }
 }
+

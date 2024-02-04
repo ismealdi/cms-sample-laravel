@@ -8,6 +8,7 @@
 
 @endsection
 @section('content')
+
 <div class="card card-custom gutter-b example example-compact">
     <div class="card-header">
         <h3 class="card-title">Form Data</h3>
@@ -95,7 +96,6 @@
     }();
 
     var useDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
     tinymce.init({
         selector: 'textarea#open-source-plugins',
         plugins: 'print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap quickbars emoticons',
@@ -195,6 +195,8 @@
     jQuery(document).ready(function () {
         KTBootstrapSelect.init();
     });
+
+    
 
 </script>
 @endpush

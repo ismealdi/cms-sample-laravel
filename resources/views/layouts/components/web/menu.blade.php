@@ -1,4 +1,4 @@
-<ul class="dropdown">
+<ul class="">
     <li class="{{ (Request::is('about*') ? 'active' : '') }}"><a href="{{url('/profile')}}">Tentang Kami</a>
     </li>
 
@@ -12,12 +12,11 @@
         </ul>
     </li>
 
-    <li><a href="#">Berita</a>
+    <li><a href="{{url('/berita' )}}">Berita</a>
         <ul>
             @foreach(\App\Models\Category::all() as $item)
             <li><a href="{{url('/berita/'.$item->slug )}}">{{ $item->name }}</a></li>
             @endforeach
-            <li><a href="{{url('/berita/' )}}">Semua</a></li>
 
         </ul>
     </li>

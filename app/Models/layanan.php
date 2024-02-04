@@ -4,14 +4,23 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
-class layanan extends Model
+class Layanan extends Model
 {
-    public $table='layanans';
-    public $fillable =[
-        'name',
-        'konten',
-        'image'
-    ];
-}
+    public $table = 'layanans';
 
+    public $fillable = [
+        'title',
+        'banner',
+        'category_id',
+        'content',
+        'slaug'
+    ];
+
+
+    public function category(): HasOne
+    {
+        return $this->hasOne(Clayanan::class, 'id','category_id');
+    }
+}

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Slider;
 use App\Models\Category;
 use App\Models\News;
+use App\Models\Cat_Layanan;
 
 class WebController extends Controller
 {

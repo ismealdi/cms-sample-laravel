@@ -130,7 +130,7 @@
     });
 
     $menuTrigger.on('click',function (e) {
-        e.preventDefault();
+        
         var t = $(this);
         t.toggleClass('active').next('ul').toggleClass('active');
     });

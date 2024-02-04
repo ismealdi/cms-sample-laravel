@@ -2,29 +2,29 @@
 
 namespace App\Http\Controllers\CMS;
 
-use App\Models\Service;
+use App\Models\document;
 use Illuminate\Http\Request;
-use App\Repositories\ServiceRepository;
-use Dflydev\DotAccessData\Data;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\File;
+use App\Http\Requests\DocumentRequest;
+use App\Repositories\DocumentRepository;
 
-class ServiceController extends CmsController
+
+class DocumentController extends CmsController
 {
-    private $serviceRepsitory;
-    
-    
-    public function __construct(ServiceRepository $servicerepo) {
+    private $documentRepository;
+
+    public function __construct(DocumentRepository $documentRepo){
         $this->middleware('auth');
-        $this->serviceRepsitory = $servicerepo;
+        $this->documentRepository=$documentRepo;
+
     }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data= $this->serviceRepsitory->all();
-        return view('cms.service.index', compact('data'));
+        $data= $this->documentRepository->paginate(10);
+        return view('cms.document.index', compact('data'));
+
     }
 
     /**
@@ -32,26 +32,24 @@ class ServiceController extends CmsController
      */
     public function create()
     {
-        return view('cms.service.create');
+        return view('cms.document.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {        
-        
-
+    {
         $input = $request->all();
-        $service = $this->serviceRepsitory->create($input);
+        $document = $this->documentRepository->create($input);
 
-        return redirect()->route('cms.service.index');
+        return redirect()->route('cms.document.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Service $service)
+    public function show(string $document)
     {
         //
     }
@@ -61,9 +59,9 @@ class ServiceController extends CmsController
      */
     public function edit(string $id)
     {
-        $data = $this->serviceRepsitory->find($id);
+        $data = $this->documentRepository->find($id);
 
-        return view('cms.service.edit', compact('data'));
+        return view('cms.document.edit', compact('data'));
     }
 
     /**
@@ -71,12 +69,10 @@ class ServiceController extends CmsController
      */
     public function update(Request $request, string $id)
     {
-       
-
         $input = $request->all();
-        $service = $this->serviceRepsitory->update($input, $id);
+        $document = $this->documentRepository->update($input, $id);
 
-        return redirect()->route('cms.service.index');
+        return redirect()->route('cms.document.index');
     }
 
     /**
@@ -84,13 +80,13 @@ class ServiceController extends CmsController
      */
     public function destroy(string $id)
     {
-        $data = $this->serviceRepsitory->find($id);
+        $data = $this->documentRepository->find($id);
 
         if (empty($data)) {
             return $this->sendError('data not found');
         }
 
-        $this->serviceRepsitory->delete($id);
+        $this->documentRepository->delete($id);
 
         return $this->sendSuccess('Data deleted successfully');
     }
