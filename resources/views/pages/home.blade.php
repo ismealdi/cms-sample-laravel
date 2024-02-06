@@ -153,8 +153,8 @@
                         <!-- section-title -->
                         <div class="section-title with-desc clearfix">
                             <div class="title-header">
-                                <h5>WE OFFER SERVICES</h5>
-                                <h1 class="title">Special High-quality Services</h1>
+                                <h5>Bersama Wujudkan Kehatan Merata</h5>
+                                <h1 class="title">Layanan Unggulan Kami</h1>
                             </div>
                             
                         </div><!-- section-title end -->
@@ -173,7 +173,7 @@
                                                 <h5>MCU</h5>
                                             </div>
                                             <div class="featured-desc">
-                                                <p>For normal & complex disease. subspecialties in  sleep medicine, cancer etc.</p>
+                                                <p>hal yang cukup penting untuk memastikan kondisi kesehatan secara menyeluruh. Kamu bisa melakukan pemeriksaan ini sesuai rekomendasi dokter.</p>
                                             </div>
                                         </div>
                                         <div class="featured-icon">
@@ -192,7 +192,7 @@
                                                 <h5>Home Care</h5>
                                             </div>
                                             <div class="featured-desc">
-                                                <p>DOs are just like MDs. Recommend for  a "whole body” approach.</p>
+                                                <p>membantu perawatan keluarga di rumah, layanan ini juga bisa membantu keluarga untuk menambah informasi seputar pelayanan medis yang tepat     </p>
                                             </div>
                                         </div>
                                         <div class="featured-icon">
@@ -211,7 +211,7 @@
                                                 <h5>Poliklinik Eksekutif</h5>
                                             </div>
                                             <div class="featured-desc">
-                                                <p>An Internists! to cure cancer, work with radiation oncologists & surgeons.</p>
+                                                <p>Hadir mencakup beberapa aspek, PEnanganan Lebih Cepat, termasuk tingkat pelayanan terbaru dan fasilitas terbaik.</p>
                                             </div>
                                         </div>
                                         <div class="featured-icon">
@@ -230,7 +230,7 @@
                                                 <h5>Geriatri</h5>
                                             </div>
                                             <div class="featured-desc">
-                                                <p>The specialists who help with problems that affect your feet or lower legs.</p>
+                                                <p>pelayanan kesehatan lansia yang mengkaji seluruh aspek Seperti promosi kesehatan, pencegahan, diagnosis, pengobatan serta rehabilitasi.</p>
                                             </div>
                                         </div>
                                         <div class="featured-icon">

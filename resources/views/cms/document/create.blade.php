@@ -25,6 +25,14 @@
                     <span class="form-text text-muted">Please enter your Category name</span>
                 </div>
             </div>
+            <div class="col-lg-6">
+                    <label>Kategori:</label>
+                    <select class="form-control selectpicker" name="cdocument_id">
+                        @foreach($cdocuments as $cdocument)
+                        <option value="{{ $cdocument->id }}">{{ $cdocument->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
             <div class="mb-3">
                 <input type="hidden" name="image_file" id="image_base64" />
                 

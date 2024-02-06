@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="mb-3">
-            <input type="hidden" name="image_file" id="image_base64" />
+            <input type="hidden" name="file" id="image_base64" />
                 
             <label for="exampleColorInput" class="form-label">input file PDf Max 1mb</label>
             <input class="form-control" type="file" id="formFileMultiple" required>

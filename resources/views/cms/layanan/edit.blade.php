@@ -8,6 +8,7 @@
 
 @endsection
 @section('content')
+
 <div class="card card-custom gutter-b example example-compact">
     <div class="card-header">
         <h3 class="card-title">Form Data</h3>

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,7 @@ Route::namespace('CMS')->prefix('cms')->as('cms.')->middleware('auth')->group(fu
     Route::resource('layanan', 'LayananController');
     Route::resource('document', 'DocumentController');
     Route::resource('clayanan', 'ClayananController');
+    Route::resource('cdocument', 'CdocumentController');
 
 
 });

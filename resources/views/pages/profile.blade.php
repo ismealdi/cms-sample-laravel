@@ -17,8 +17,8 @@
                     <div class="col-md-12"> 
                         <div class="title-box ttm-textcolor-white">
                             <div class="page-title-heading">
-                                <h1 class="title">About Us</h1>
-                                <h3 class="subtitle"> About Our Hospital</h3>
+                                <h1 class="title">Tentang Kami</h1>
+                                <h3 class="subtitle"> </h3>
                             </div><!-- /.page-title-captions -->
                             <div class="breadcrumb-wrapper">
                                 <div class="container">

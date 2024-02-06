@@ -11,7 +11,7 @@ class DocumentRepository extends BaseRepository
 {
     protected $fieldSearchable =[
         'name',
-        'image'
+        'file'
 
     ];
 
@@ -27,8 +27,8 @@ class DocumentRepository extends BaseRepository
         $model = $this->model->newInstance($input);
         $model->save();
        
-        if (isset($input['image_file'])) {
-        $base64_file = $input["image_file"];
+        if (isset($input['file'])) {
+        $base64_file = $input["file"];
 
             // Periksa apakah string base64 adalah PDF
             if (preg_match('/^data:application\/pdf;base64,/', $base64_file)) {
@@ -50,8 +50,8 @@ class DocumentRepository extends BaseRepository
     }
 
     public function update(array $input, string $id): Document{
-        if(isset($input['image_file'])) {
-            $base64_image = $input["image_file"];
+        if(isset($input['file'])) {
+            $base64_image = $input["file"];
             if (preg_match('/^data:application\/pdf;base64,/', $base64_image)) {
                 $photo = $id.".pdf";
                 $data = substr($base64_image, strpos($base64_image, ',') + 1);

@@ -1,8 +1,8 @@
 @extends('layouts.app')
-@section('title', 'layanan')
+@section('title', 'News')
 @section('subheader', true)
 @section('buttons')
-<a href="{{ route('cms.layanan.create') }}" class="btn btn-light-primary font-weight-bold ml-2">Add berita</a>
+<a href="{{ route('cms.cdocument.create') }}" class="btn btn-light-primary font-weight-bold ml-2">Add berita</a>
 @endsection
 @section('pagination-sample')
 
@@ -16,23 +16,19 @@
                     <th scope="col">No</th>
                     <th scope="col">Name</th>
                     <th scope="col">Slug</th>
-                    <th scope="col">Category</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($data as $item)
                 <tr data-route="item-data-{{ $item->id }}">
-                    <th scope="row">{{ $loop->index+1 }}</th>
-                    <td>{{ $item->title }}</td>
+                    <th scope="row">1</th>
+                    <td>{{ $item->name }}</td>
                     <td>
                         <span class="label label-inline label-light-primary font-weight-bold">
-                            {{ $item->slaug }}
+                            {{ $item->slug }}
                         </span>
                     </td>
-                    <td>{{ $item->category->name }}</td>
-
-
                     <td>
                         <div class="dropdown dropdown-inline">
                             <a href="#" class="btn btn-clean btn-hover-light-primary btn-sm btn-icon"
@@ -43,7 +39,7 @@
                                 <!--begin::Navigation-->
                                 <ul class="navi navi-hover">
                                     <li class="navi-item">
-                                        <a href="{{ route('cms.layanan.edit', $item->id) }}" class="navi-link">
+                                        <a href="{{ route('cms.cdocument.edit', $item->id) }}" class="navi-link">
                                             <span class="navi-text">
                                                 Edit
                                             </span>
@@ -51,7 +47,7 @@
                                     </li>
                                     <li class="navi-item">
                                         <a class="navi-link delete"
-                                            data-route="{{ route('cms.layanan.destroy', $item->id) }}">
+                                            data-route="{{ route('cms.cdocument.destroy', $item->id) }}">
                                             <span class="navi-text text-danger">
                                                 Delete
                                             </span>

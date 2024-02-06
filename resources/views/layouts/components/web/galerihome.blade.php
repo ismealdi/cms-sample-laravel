@@ -13,7 +13,7 @@
 <div class="content py-5">
   
   <div class="section-title res-991-pt-30">
-        <h2 class="title ">Galeri</h2>
+        <h2 class="title ">Galeri Kegiatan </h2>
     </div>
         <div class="container owl-2-style ">
 

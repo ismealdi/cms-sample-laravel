@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Models\Category;
+use App\Models\Cdocument;
 use App\Repositories\BaseRepository;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\File;
 /**
  * Class CategoryRepository.
  */
-class CategoryRepository extends BaseRepository
+class CdocumentRepository extends BaseRepository
 {
 
     protected $fieldsearchable =[
@@ -23,9 +23,9 @@ class CategoryRepository extends BaseRepository
     }
    
     public function model(): string{
-        return Category::class;
+        return Cdocument::class;
     }
-    public function create(array $input): Category {
+    public function create(array $input): Cdocument {
         $input["slug"] = str_replace(" ", "-", strtolower($input["name"]));
         
         $model = $this->model->newInstance($input);
@@ -33,7 +33,7 @@ class CategoryRepository extends BaseRepository
 
         return $model;
     }
-    public function update(array $input, string $id): Category {
+    public function update(array $input, string $id): Cdocument {
         $input["slug"] = str_replace(" ", "-", strtolower($input["name"]));
 
         $query = $this->model->newQuery();
