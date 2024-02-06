@@ -31,15 +31,14 @@ Route::namespace('CMS')->prefix('cms')->as('cms.')->middleware('auth')->group(fu
     Route::resource('document', 'DocumentController');
     Route::resource('clayanan', 'ClayananController');
     Route::resource('cdocument', 'CdocumentController');
-
-
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [App\Http\Controllers\WebController::class, 'home'])->name('web.home');
 Route::get('/berita/{slug?}', [App\Http\Controllers\WebController::class, 'berita'])->name('web.berita');
 Route::get('/berita/{slug?}/{id?}', [App\Http\Controllers\WebController::class, 'beritaDetail'])->name('web.berita.detail');
-
+Route::get('/laporan', [App\Http\Controllers\WebController::class, 'laporan'])->name('web.laporan');
+Route::get('/laporan/{slug}', [App\Http\Controllers\WebController::class, 'laporanDocument'])->name('web.laporanDocument');
 
 Route::get('/profile', function () {
     return view('pages.profile');
@@ -125,9 +124,6 @@ Route::get('/pelatihan', function () {
     return view('pages.pelatihan');
 });
 
-Route::get('/laporan', function () {
-    return view('pages.laporan');
-});
 Route::get('/filelaporan', function () {
     return view('pages.filelaporan');
 });

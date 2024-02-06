@@ -20,18 +20,27 @@
     
     <div class="card-body">
         <div class="form-group row">
-            <div class="col-lg-12">
+            <div class="col-lg-6">
                 <label>Name:</label>
                 {!! Form::text('name', null, ['class' => 'form-control', 'required',
                 'placeholder' => 'Enter berita Name']) !!}
                 <span class="form-text text-muted">Please enter your berita name</span>
+            </div>
+            <div class="col-lg-6">
+                <label>Kategori:</label>
+                <select class="form-control selectpicker" name="category_id">
+                    @foreach($categories as $category)
+                    <option value="{{ $category->id }}" {{ ($category->id == $data->category_id) ? 'selected' : ''
+                        }}>{{ $category->name }}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="mb-3">
             <input type="hidden" name="file" id="image_base64" />
                 
             <label for="exampleColorInput" class="form-label">input file PDf Max 1mb</label>
-            <input class="form-control" type="file" id="formFileMultiple" required>
+            <input class="form-control" type="file" id="formFileMultiple">
           </div>
         
     </div>

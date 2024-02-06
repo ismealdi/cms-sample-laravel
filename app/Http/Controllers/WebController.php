@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Slider;
 use App\Models\Category;
 use App\Models\News;
+use App\Models\Cdocument;
+use App\Models\Document;
 use App\Models\Cat_Layanan;
 
 class WebController extends Controller
@@ -35,6 +37,18 @@ class WebController extends Controller
         ->get();
         
         return view('pages.article', compact('news', 'category', 'popular'));
+    }
+
+    public function laporan() {
+        $documents = Cdocument::all();
+        return view('pages.laporan', compact('documents'));
+    }
+
+    public function laporanDocument(string $slug = null) {
+        $doc = Cdocument::whereSlug($slug)->first();
+        $documents = Document::whereCategoryId($doc->id)->get();
+
+        return view('pages.filelaporan', compact('doc', 'documents'));
     }
 
     public function berita(string $slug = null) {

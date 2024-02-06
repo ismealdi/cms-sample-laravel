@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Create Service')
+@section('title', 'Create Galery')
 @section('subheader', true)
 @section('buttons')
 

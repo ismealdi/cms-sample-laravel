@@ -67,17 +67,6 @@
                 </div>
 
             </div>
-            <div class="card-footer">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <a href="{{ route('cms.layanan.index') }}" type="reset" class="btn btn-secondary">Cancel</a>
-                    </div>
-                    <div class="col-lg-6 text-lg-right">
-                        <button type="submit" class="btn btn-primary">Save</button>
-                    </div>
-                </div>
-            </div>
-
 
         </div>
         <div class="card-footer">

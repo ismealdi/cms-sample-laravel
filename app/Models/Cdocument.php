@@ -14,8 +14,8 @@ class Cdocument extends Model
         'slug',
     ];
 
-    public function countNews(): Int
+    public function documents(): Int
     {
-        return $this->hasMany(News::class, 'category_id','id')->count();
+        return $this->hasMany(Document::class, 'category_id','id')->count();
     }
 }

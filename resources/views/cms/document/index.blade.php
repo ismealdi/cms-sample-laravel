@@ -15,6 +15,7 @@
                 <tr>
                     <th scope="col">Name File</th>
                     <th scope="col">File</th>
+                    <th scope="col">Kategori</th>
                     <th scope="col" class="text-right" width="5%">Action</th>
                 </tr>
             </thead>
@@ -33,6 +34,7 @@
                         -
                         @endisset
                     </td>
+                    <td class="py-4">{{ isset($item->category) ? ucwords($item->category->name) : "-" }}</td>
                     <td>
                         <div class="dropdown dropdown-inline">
                             <a href="#" class="btn btn-clean btn-hover-light-primary btn-sm btn-icon"

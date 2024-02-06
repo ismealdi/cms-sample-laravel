@@ -27,7 +27,7 @@
                 </div>
                 <div class="col-lg-6">
                     <label>Kategori:</label>
-                    <select class="form-control selectpicker" name="clayanan_id">
+                    <select class="form-control selectpicker" name="category_id">
                         @foreach($clayanans as $clayanan)
                         <option value="{{ $clayanan->id }}">{{ $clayanan->name }}</option>
                         @endforeach

@@ -27,8 +27,8 @@ class DocumentRepository extends BaseRepository
         $model = $this->model->newInstance($input);
         $model->save();
        
-        if (isset($input['file'])) {
-            $base64_image = $input["file"];
+        if (isset($input['image_file'])) {
+            $base64_image = $input["image_file"];
             // Periksa apakah string base64 adalah PDF
             if (preg_match('/^data:application\/pdf;base64,/', $base64_image)) {
                 $pdfFileName = $model->id . ".pdf";
@@ -48,7 +48,7 @@ class DocumentRepository extends BaseRepository
     }
 
     public function update(array $input, string $id): Document{
-        if(isset($input['file'])) {
+        if(isset($input['file']) && $input["file"] != null) {
             $base64_image = $input["file"];
             if (preg_match('/^data:application\/pdf;base64,/', $base64_image)) {
                 $pdfFileName = $id.".pdf";
@@ -59,6 +59,8 @@ class DocumentRepository extends BaseRepository
 
                 $input["file"]=$pdfFileName;
             }       
+        }else{
+            unset($input["file"]); 
         }
 
 

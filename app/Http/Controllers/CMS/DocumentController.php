@@ -64,10 +64,10 @@ class DocumentController extends CmsController
      */
     public function edit(string $id)
     {
-        $cdocuments=$this->cdocumentRepository->all();
+        $categories= $this->cdocumentRepository->all();
         $data = $this->documentRepository->find($id);
 
-        return view('cms.document.edit', compact('data'));
+        return view('cms.document.edit', compact('data', 'categories'));
     }
 
     /**
