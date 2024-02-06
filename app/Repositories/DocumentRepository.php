@@ -28,20 +28,18 @@ class DocumentRepository extends BaseRepository
         $model->save();
        
         if (isset($input['file'])) {
-        $base64_file = $input["file"];
-
+            $base64_image = $input["file"];
             // Periksa apakah string base64 adalah PDF
-            if (preg_match('/^data:application\/pdf;base64,/', $base64_file)) {
-
+            if (preg_match('/^data:application\/pdf;base64,/', $base64_image)) {
                 $pdfFileName = $model->id . ".pdf";
-                $data = substr($base64_file, strpos($base64_file, ',') + 1);
+                $data = substr($base64_image, strpos($base64_image, ',') + 1);
                 $decodedData = base64_decode($data);
 
                 // Simpan PDF ke disk "Documents"
                 Storage::disk("docpdf")->put($pdfFileName, $decodedData);
 
                 // Perbarui nama file dalam array $input
-                $model["file"] = $pdfFileName;
+                $model->update(["file" => $pdfFileName]);
        
             }       
         }
@@ -53,13 +51,13 @@ class DocumentRepository extends BaseRepository
         if(isset($input['file'])) {
             $base64_image = $input["file"];
             if (preg_match('/^data:application\/pdf;base64,/', $base64_image)) {
-                $photo = $id.".pdf";
+                $pdfFileName = $id.".pdf";
                 $data = substr($base64_image, strpos($base64_image, ',') + 1);
-                $data = base64_decode($data);
+                $decodedData = base64_decode($data);
 
-                Storage::disk("docpdf")->put($photo, $data);
+                Storage::disk("docpdf")->put($pdfFileName, $decodedData);
 
-                $input["file"]=$photo;
+                $input["file"]=$pdfFileName;
             }       
         }
 

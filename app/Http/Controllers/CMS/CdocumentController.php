@@ -62,7 +62,7 @@ class CdocumentController extends CmsController
     public function update(Request $request, string $id)
     {
         $input =$request->all();
-        $cdocument=$this->cdocumentRepository->update($input,$id);
+        $cdocuments=$this->cdocumentRepository->update($input,$id);
         return redirect()->route('cms.cdocument.index');
 
     }

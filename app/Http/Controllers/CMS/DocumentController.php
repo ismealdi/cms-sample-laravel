@@ -6,15 +6,19 @@ use App\Models\document;
 use Illuminate\Http\Request;
 use App\Http\Requests\DocumentRequest;
 use App\Repositories\DocumentRepository;
+use App\Repositories\CdocumentRepository;
+
 
 
 class DocumentController extends CmsController
 {
-    private $documentRepository;
-
-    public function __construct(DocumentRepository $documentRepo){
+    private $documentRepository, $cdocumentRepository;
+          
+    
+    public function __construct(DocumentRepository $documentRepo, CdocumentRepository $cdocumentRepo) {
         $this->middleware('auth');
-        $this->documentRepository=$documentRepo;
+        $this->documentRepository = $documentRepo;
+        $this->cdocumentRepository = $cdocumentRepo;
 
     }
     /**
@@ -32,7 +36,8 @@ class DocumentController extends CmsController
      */
     public function create()
     {
-        return view('cms.document.create');
+        $cdocuments = $this->cdocumentRepository->all();
+        return view('cms.document.create', compact('cdocuments'));
     }
 
     /**
@@ -59,6 +64,7 @@ class DocumentController extends CmsController
      */
     public function edit(string $id)
     {
+        $cdocuments=$this->cdocumentRepository->all();
         $data = $this->documentRepository->find($id);
 
         return view('cms.document.edit', compact('data'));
@@ -71,6 +77,7 @@ class DocumentController extends CmsController
     {
         $input = $request->all();
         $document = $this->documentRepository->update($input, $id);
+
 
         return redirect()->route('cms.document.index');
     }
