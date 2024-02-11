@@ -1,29 +1,82 @@
 @extends('layouts.base')
-@section('title', 'Layanan ' )
-
+@section('title', )
+@section('titlebar', false)
 @section('statusbar', true)
 @section("content")
-@include('layouts.components.web.title')
-@include('layouts.components.web.sidebar')
 
-                        <div class="col-lg-9 content-area">
-                       
-                        <div class="ttm-service-single-content-area">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="ttm_single_image-wrapper mb-35">
-                                        <img class="img-fluid" src="{{ asset('storage/layanan/'.$news->banner) }}" alt="">
+<div class="page sidebar-true">
+
+    <div class="ttm-page-title-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-box ttm-textcolor-white">
+                        <div class="page-title-heading">
+                            <h1 class="title">{{ isset($category) ? $category->name : ''}}</h1>
+                        </div><!-- /.page-title-captions -->
+                        <div class="breadcrumb-wrapper">
+                            <div class="container">
+                                <div class="breadcrumb-wrapper-inner">
+                                    <span>
+                                        <a title="Go to Delmont." href="{{ url('layanan') }}" class="home"><i
+                                                class="themifyicon ti-home"></i>&nbsp;&nbsp;Home</a>
+                                    </span>
+                                    <span class="ttm-bread-sep">&nbsp; | &nbsp;</span>
+                                    <span>{{ isset($category) ? $category->name : ''}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- page-title end-->
+
+ <!--site-main start-->
+ <div class="site-main">
+    <div class="col-lg-9 content-area">
+                    
+        <div class="sidebar ttm-sidebar-right ttm-bgcolor-white break-991-colum clearfix">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-lg-9 content-area">
+                        @foreach($news as $item)
+                        <article class="post ttm-blog-classic clearfix">
+                            <!-- post-featured-wrapper -->
+                            <div class="ttm-post-featured-wrapper ttm-featured-wrapper">
+                                <div class="ttm-post-featured">
+                                    <img class="img-fluid" src="{{ asset('storage/layanan/'.$item->banner) }}"
+                                        alt="">
+                                </div>
+        
+                            </div><!-- post-featured-wrapper end -->
+                            <!-- ttm-blog-classic-content -->
+                            <div class="ttm-blog-classic-content">
+                                <div class="ttm-post-entry-header">
+                                    <div class="post-meta">
+                                        
+                                        <span class="ttm-meta-line tags-links"><i class="fa fa-tag"></i>{{
+                                            $item->category->name }}</span>
                                     </div>
-                                        <div class="ttm-service-description">
-                                       
-                                        <div class="sep_holder_box width-100 mb-20">
-                                            <span class="sep_holder">
-                                            <span class="sep_line"></span></span>
-                                            <span class="sep_holder">
-                                            <span class="sep_line"></span></span>
-                                        </div>
-                                        <div class="mb-35">
-                                            {!! $news->content !!}
+                                    <header class="entry-header">
+                                        <h2 class="entry-title"><a
+                                                href="{{ url('layanan/'.$item->category->slug.'/'.$item->slaug) }}">{{
+                                                strip_tags($item->title) }}</a>
+                                        </h2>
+                                    </header>
+                                </div>
+                                <div class="entry-content">
+                                    <div class="ttm-box-desc-text">
+                                        <p>{{ substr(strip_tags($item->content), 0, 250) }}</p>
+                                    </div>
+                                </div>
+                            </div><!-- ttm-blog-classic-content end -->
+                        </article>
+                        @endforeach
+
+                
+
                         
                                         <h4>Layanan Poli KLnik RSPG</h4>
                                         <div class="sep_holder_box width-100 mb-20">
@@ -146,9 +199,6 @@
 
 
     <!--page start-->
-    
-
-
 
 @endsection
 

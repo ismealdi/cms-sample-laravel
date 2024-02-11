@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Clayanan extends Model
 {
@@ -17,6 +18,6 @@ class Clayanan extends Model
 
     public function countNews(): Int
     {
-        return $this->hasMany(News::class, 'category_id','id')->count();
+        return $this->hasMany(Layanan::class, 'category_id','id')->count();
     }
 }

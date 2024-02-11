@@ -44,7 +44,7 @@ class LayananRepository extends BaseRepository
                 $data = substr($base64_image, strpos($base64_image, ',')+1);
                 $data = base64_decode($data);
 
-                storage::disk("services") ->put($photo, $data);
+                storage::disk("layanan") ->put($photo, $data);
 
                 $model->update(["banner"=> $photo]);
             }       
@@ -60,7 +60,7 @@ class LayananRepository extends BaseRepository
                 $data = substr($base64_image, strpos($base64_image, ',') + 1);
                 $data = base64_decode($data);
 
-                storage::disk("services")->put($photo, $data);
+                storage::disk("layanan")->put($photo, $data);
 
                 $input["banner"]=$photo;
             }       
@@ -79,7 +79,7 @@ class LayananRepository extends BaseRepository
         $query = $this->model->newQuery();
         $model = $query->findOrFail($id);
 
-        $filepath = storage_path('app/public/services/'.$model->banner);
+        $filepath = storage_path('app/public/layanan/'.$model->banner);
 
         if(File::exists($filepath)) {
             File::delete($filepath);

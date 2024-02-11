@@ -39,6 +39,8 @@ Route::get('/berita/{slug?}', [App\Http\Controllers\WebController::class, 'berit
 Route::get('/berita/{slug?}/{id?}', [App\Http\Controllers\WebController::class, 'beritaDetail'])->name('web.berita.detail');
 Route::get('/laporan', [App\Http\Controllers\WebController::class, 'laporan'])->name('web.laporan');
 Route::get('/laporan/{slug}', [App\Http\Controllers\WebController::class, 'laporanDocument'])->name('web.laporanDocument');
+Route::get('/layanan/{slug}', [App\Http\Controllers\WebController::class, 'layanan'])->name('web.layanan');
+Route::get('/layanan/{slug}/{slaug?}', [App\Http\Controllers\WebController::class, 'layananDetail'])->name('web.layanan.detail');
 
 Route::get('/profile', function () {
     return view('pages.profile');
@@ -65,9 +67,7 @@ Route::get('/kegiatan ', function () {
 });
 
 //menu Unggulan
-Route::get('/unggulan ', function () {
-    return view('pages.unggulan');
-});
+
 Route::get('/mcu ', function () {
     return view('pages.mcu');
 });

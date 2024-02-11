@@ -77,37 +77,35 @@ class WebController extends Controller
         $category = null;
 
         if(isset($slug)) {
-            $category = Clayanan::whereSlug($slug)->first();
+            $category = Category::whereSlug($slug)->first();
         }
 
-        $services = new Layanan();
+        $news = new Layanan();
 
         if(isset($category)) {
-            $services = $services->whereCategoryId($category->id);
+            $news = $news->whereCategoryId($category->id);
         }
 
-        $services = $services->paginate(6);
-        $service = $services[0];
+        $news = $news->paginate(6);
+        $popular = Layanan::inRandomOrder()
+        ->limit(5)
+        ->get();
 
-        return view('pages.layanan', compact('category', 'services', 'service'));
+        return view('pages.layanan', compact('news', 'category', 'popular'));
     }
-
-    public function layananDetail(string $slug, string $slaug = null) {
+    public function layananDetail(string $slug, string $id = null) {
         $category = null;
 
         if(isset($slug)) {
             $category = Clayanan::whereSlug($slug)->first();
         }
-
-        $services = new Layanan();
-
-        if(isset($category)) {
-            $services = $services->whereCategoryId($category->id);
-        }
-
-        $services = $services->paginate(6);
-        $service = Layanan::whereSlaug($slaug)->firstOrFail();
         
-        return view('pages.layanan', compact('category', 'services', 'service'));
+        $news = Layanan::whereSlaug($id)->firstOrFail();
+
+        $popular = Layanan::inRandomOrder()
+        ->limit(5)
+        ->get();
+        
+        return view('pages.unggulan', compact('news', 'category', 'popular'));
     }
 }

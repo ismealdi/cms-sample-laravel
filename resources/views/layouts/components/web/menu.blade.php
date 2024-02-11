@@ -2,15 +2,12 @@
     <li class="{{ (Request::is('about*') ? 'active' : '') }}"><a href="{{url('/profile')}}">Tentang Kami</a>
     </li>
 
-    <li><a href="#">Layanan</a>
+    <li><a>Layanan</a>
         <ul>
-            <li><a href="{{url('/unggulan')}}">Unggulan </a></li>
-            <li><a href="#">Rawat Jalan </a></li>
-            <li><a href="{{url('/ruangmelati')}}">Rawat Inap</a></li>
-            <li><a href="#">MCU</a></li>
-            <li><a href="#">Poliklinik Eksekutif</a></li>
+            @foreach(\App\Models\Clayanan::all() as $item)
+            <li><a href="{{url('/layanan/'.$item->slug )}}">{{ $item->name }}</a></li>
+            @endforeach
         </ul>
-    </li>
 
     <li><a href="{{url('/berita' )}}">Berita</a>
         <ul>
