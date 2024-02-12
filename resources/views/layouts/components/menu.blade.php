@@ -71,7 +71,7 @@
                 </li>
                 <li class="menu-item " aria-haspopup="true">
                     <a href="{{ route('cms.category.index') }}" class="menu-link ">
-                        <span class="menu-text">Pengumuman</span><span class="menu-desc"></span>
+                        <span class="menu-text"></span><span class="menu-desc"></span>
                     </a>
                 </li>
             </ul>
@@ -116,7 +116,7 @@
         </div>
     </li>
     <li class="menu-item menu-item-submenu menu-item-rel" aria-haspopup="false">
-        <a href="{{ route('cms.service.index') }}" class="menu-link">
+        <a href="{{ route('cms.galeri.index') }}" class="menu-link">
             <span class="menu-text">
                 Gallery
             </span>
@@ -144,12 +144,12 @@
             <ul class="menu-subnav">
                 <li class="menu-item menu-item-activex" aria-haspopup="true">
                     <a href="{{ route('cms.clayanan.index') }}" class="menu-link">
-                        <span class="menu-text">Katagori</span><span class="menu-desc"></span>
+                        <span class="menu-text">Katagori Pelayanan</span><span class="menu-desc"></span>
                     </a>
                 </li>
                 <li class="menu-item " aria-haspopup="true">
                     <a href="{{ route('cms.layanan.index') }}" class="menu-link ">
-                        <span class="menu-text">Berita</span><span class="menu-desc"></span>
+                        <span class="menu-text">Jenis Pelayanan</span><span class="menu-desc"></span>
                     </a>
                 </li>
                 <li class="menu-item " aria-haspopup="true">

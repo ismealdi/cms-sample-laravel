@@ -2,29 +2,29 @@
 
 namespace App\Http\Controllers\CMS;
 
-use App\Models\Service;
+use App\Models\Galeri;
 use Illuminate\Http\Request;
-use App\Repositories\ServiceRepository;
-use Dflydev\DotAccessData\Data;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\File;
+use App\Http\Requests\SliderRequest;
+use App\Repositories\GaleriRepository;
 
-class ServiceController extends CmsController
+class GaleriController extends CmsController
 {
-    private $serviceRepository;
+
+    private $galeriRepository;        
     
-    
-    public function __construct(ServiceRepository $servicerepo) {
+    public function __construct(GaleriRepository $galeriRepo) {
         $this->middleware('auth');
-        $this->serviceRepository = $servicerepo;
+        $this->galeriRepository = $galeriRepo;
     }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data= $this->serviceRepository->all();
-        return view('cms.service.index', compact('data'));
+        $data = $this->galeriRepository->all();
+
+        return view('cms.galeri.index', compact('data'));
     }
 
     /**
@@ -32,23 +32,26 @@ class ServiceController extends CmsController
      */
     public function create()
     {
-        return view('cms.service.create');
+        return view('cms.galeri.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {        
-        
+    {
+        $request["state"] = (isset($request["state"])) ? 1 : 0;
 
-        return redirect()->route('cms.service.index');
+        $input = $request->all();
+        $slider = $this->galeriRepository->create($input);
+
+        return redirect()->route('cms.galeri.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Service $service)
+    public function show(Slider $slider)
     {
         //
     }
@@ -58,9 +61,9 @@ class ServiceController extends CmsController
      */
     public function edit(string $id)
     {
-        $data = $this->serviceRepository->find($id);
+        $data = $this->galeriRepository->find($id);
 
-        return view('cms.service.edit', compact('data'));
+        return view('cms.slider.edit', compact('data'));
     }
 
     /**
@@ -68,12 +71,12 @@ class ServiceController extends CmsController
      */
     public function update(Request $request, string $id)
     {
-       
+        $request["state"] = (isset($request["state"])) ? 1 : 0;
 
         $input = $request->all();
-        $service = $this->serviceRepository->update($input, $id);
+        $slider = $this->galeriRepository->update($input, $id);
 
-        return redirect()->route('cms.service.index');
+        return redirect()->route('cms.slider.index');
     }
 
     /**
@@ -81,13 +84,13 @@ class ServiceController extends CmsController
      */
     public function destroy(string $id)
     {
-        $data = $this->serviceRepository->find($id);
+        $data = $this->galeriRepository->find($id);
 
         if (empty($data)) {
             return $this->sendError('data not found');
         }
 
-        $this->serviceRepository->delete($id);
+        $this->galeriRepository->delete($id);
 
         return $this->sendSuccess('Data deleted successfully');
     }

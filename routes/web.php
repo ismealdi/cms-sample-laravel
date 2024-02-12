@@ -31,6 +31,8 @@ Route::namespace('CMS')->prefix('cms')->as('cms.')->middleware('auth')->group(fu
     Route::resource('document', 'DocumentController');
     Route::resource('clayanan', 'ClayananController');
     Route::resource('cdocument', 'CdocumentController');
+    Route::resource('galeri', 'GaleriController');
+
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

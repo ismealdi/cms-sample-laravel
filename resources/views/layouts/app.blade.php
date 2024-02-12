@@ -134,7 +134,7 @@
                         <div class="text-dark order-2 order-md-1">
                             <span class="text-muted font-weight-bold mr-2">{{ Carbon\Carbon::now()->format('Y') }}
                                 ©</span>
-                            <a href="https://github.com/ismealdi" target="_blank"
+                            <a href="https://github.com/mancoy21" target="_blank"
                                 class="text-dark-75 text-hover-primary">Setalis Digital</a>
                         </div>
                         <!--end::Copyright-->

@@ -104,21 +104,15 @@
                     <div class="widget style2 widget-out-link clearfix">
                         <h3 class="widget-title">Berita Terbaru</h3>
                         <ul class="widget-post ttm-recent-post-list">
-                            <li>
-                                <a href="single-blog.html"><img src="images/blog/01.jpg" alt="post-img"></a>
-                                <span class="post-date">April 1, 2019</span>
-                                <a href="single-blog.html">How much aspirin to take for stroke</a>
+                        @foreach(\App\Models\News::all() as $item)
+                        <li><a href="{{url('/berita/'.$item->slug )}}"><img
+                                src="{{ asset('storage/services/'.$item->banner) }}" alt="post-img"></a>
+                                <span class="post-date">{{
+                                        $item['post-date']->format('M d, Y') }}</span>
+                                    <a href="{{ url('berita/'.$item->category->slug.'/'.$item->slaug) }}">{{
+                                        $item->title }}</a>
                             </li>
-                            <li>
-                                <a href="single-blog.html"><img src="images/blog/02.jpg" alt="post-img"></a>
-                                <span class="post-date">April 1, 2019</span>
-                                <a href="single-blog.html">Implant Surgical equipment technology</a>
-                            </li>
-                            <li>
-                                <a href="single-blog.html"><img src="images/blog/03.jpg" alt="post-img"></a>
-                                <span class="post-date">April 05, 2019</span>
-                                <a href="single-blog.html">The Benefits of Middle-Age Fitness</a>
-                            </li>
+                        @endforeach
                         </ul>
                     </div>
                 </div>

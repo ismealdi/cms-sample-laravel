@@ -10,6 +10,7 @@ use App\Models\Cdocument;
 use App\Models\Document;
 use App\Models\Layanan;
 use App\Models\Clayanan;
+use App\Models\Galeri;
 
 class WebController extends Controller
 {
@@ -24,6 +25,13 @@ class WebController extends Controller
         return view('pages.home', compact('sliders'));
     }
 
+    public function galeri()
+    {
+        $images = Galeri ::all();
+        return view('pages.pelatihan', compact('images'));
+    }
+
+
     public function beritaDetail(string $slug, string $id = null) {
         $category = null;
 
@@ -37,7 +45,8 @@ class WebController extends Controller
         ->limit(5)
         ->get();
         
-        return view('pages.article', compact('news', 'category', 'popular'));
+        return view('pages.article', compact ('news', 'category', 'popular'));
+        return view('components.web.footer',  compact ( 'popular'));
     }
 
     public function laporan() {
