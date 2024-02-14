@@ -26,7 +26,7 @@
                     <div class="container">
                         <div class="site-branding">
                             <a class="home-link" href="{{ url('/') }}" title="Delmont" rel="home">
-                                <img id="logo-img" class="img-center" src="{{ url('images/logo-img-rspg.png') }}"
+                                <img id="logo-img" class="img-center" src="{{ url('images/rspgv2.png') }}"
                                     alt="logo-img">
                             </a>
                         </div>

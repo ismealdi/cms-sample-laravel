@@ -27,8 +27,9 @@ class WebController extends Controller
 
     public function galeri()
     {
-        $images = Galeri ::all();
-        return view('pages.pelatihan', compact('images'));
+        $images = Galeri::paginate(6);
+
+        return view('pages.galeri', compact('images'));
     }
 
 

@@ -17,4 +17,14 @@
     <span class="visually-hidden">Next</span>
   </button>
   @endif
+
+  <div class="container" id="slider">
+    <div class="carousel-indicators">
+      
+      @foreach ($sliders as $slider)
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="{{ $loop->index }}" class="{{ ($loop->first) ? 'active' : ''}}" aria-current="true"
+        aria-label="Slide {{ $loop->index }}"></button>
+      @endforeach
+    </div>
+  </div>
 </div>

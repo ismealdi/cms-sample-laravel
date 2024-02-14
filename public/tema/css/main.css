@@ -2392,7 +2392,7 @@ ul.ttm-pricelist-block li .service-price {
 }
 
 .site-branding img {
-    max-height: 33px;
+    max-height: 57px;
 }
 
 /** SiteNavigation(Menu) **/
@@ -4331,7 +4331,7 @@ section.error-404 .page-content p {
 }
 
 body {
-    background: #f2f2f2;
+    background: #FFF;
 }
 
 @keyframes slide {
@@ -4443,3 +4443,58 @@ ul.pagination .page-item.active .page-link {
     background-color: #01d6a3;
     color: #fff !important
 }
+
+a {
+    text-decoration: none !important;
+}
+
+
+.media-29101 h3 {
+    font-size: 18px;
+    font-weight: 400 !important; }
+    .media-29101 h3 a {
+      color: #6c757d; }
+
+      
+.owl-2-style .owl-nav {
+    display: none; }
+  
+  .owl-2-style .owl-dots {
+    text-align: center;
+    position: relative;
+    bottom: -30px; }
+    .owl-2-style .owl-dots .owl-dot {
+      display: inline-block; }
+      .owl-2-style .owl-dots .owl-dot span {
+        display: inline-block;
+        width: 15px;
+        height: 3px;
+        border-radius: 0px;
+        background: #cccccc;
+        -webkit-transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
+        -o-transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
+        transition: 0.3s all cubic-bezier(0.32, 0.71, 0.53, 0.53);
+        margin: 3px; }
+      .owl-2-style .owl-dots .owl-dot.active span {
+        background: #007bff; }
+      .owl-2-style .owl-dots .owl-dot:active, .owl-2-style .owl-dots .owl-dot:focus {
+        outline: none; }
+
+        #slider .carousel-indicators {
+            left: auto;
+            right: 0;
+            bottom: auto;
+            top: 2rem;
+        }
+        
+        #slider .carousel-indicators [data-bs-target] {
+            background-color: #25252593;
+            height: 10px;
+            border-radius: 100%;
+            width: 10px;
+            border: 0px;
+        }
+        
+        #slider .carousel-indicators [data-bs-target].active {
+            background-color: #1dc6a1;
+        }

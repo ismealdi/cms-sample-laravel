@@ -122,7 +122,7 @@
                                                     </div>
                                                     <div class="col-sm-9">
                                                         <span just></span>
-                                                        <p>RSPG mempunyai tugas menyelenggarakan upaya penyembuhan dan pemulihan secara paripurna, pendidikan dan pelatihan, penelitian dan pengembangan di bidang kesehatan paru secara serasi, terpadu dan berkesinambungan dengan upaya peningkatan kesehatan lainnya serta melaksanakan upaya rujukan. Berdasarkan Keputusan Menteri Keuangan Nomor 226/KMK.05/2009 tentang Penetapan Rumah Sakit Paru Dr.M.Goenawan Partowidigdo Cisarua Bogor Pada Departemen Kesehatan Sebagai Instansi Pemerintah Yang Menerapkan Pengelolaan Keuangan Badan Layanan umum, RSPG merupakan instansi pemerintah yang menerapakan Pengelolaan Keuangan Badan Layanan Umum dengan status Badan Layanan Umum secara penuh (BLU penuh).</p>
+                                                        <h6>RSPG mempunyai tugas menyelenggarakan upaya penyembuhan dan pemulihan secara paripurna, pendidikan dan pelatihan, penelitian dan pengembangan di bidang kesehatan paru secara serasi, terpadu dan berkesinambungan dengan upaya peningkatan kesehatan lainnya serta melaksanakan upaya rujukan. Berdasarkan Keputusan Menteri Keuangan Nomor 226/KMK.05/2009 tentang Penetapan Rumah Sakit Paru Dr.M.Goenawan Partowidigdo Cisarua Bogor Pada Departemen Kesehatan Sebagai Instansi Pemerintah Yang Menerapkan Pengelolaan Keuangan Badan Layanan umum, RSPG merupakan instansi pemerintah yang menerapakan Pengelolaan Keuangan Badan Layanan Umum dengan status Badan Layanan Umum secara penuh (BLU penuh).</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -150,7 +150,7 @@
                                                         </div>
                                                     </div>
                                                 <div class="col-sm-9">
-                                                        <p>Our Clinic has grown to provide a world class facility for the treatment of tooth loss, dental cosmetics and bore advanced restorative dentistry. We are among the most qualified implant providers in the AUS with over 30 years of quality training and experience.</p>
+                                                        <h6>Our Clinic has grown to provide a world class facility for the treatment of tooth loss, dental cosmetics and bore advanced restorative dentistry. We are among the most qualified implant providers in the AUS with over 30 years of quality training and experience.</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -172,8 +172,8 @@
                                                                             </svg></a>
                                                                         </div>
                                                                         <img class="img-fluid" src="images/portfolio/norma.jpg" alt="image">
-                                                                    </div>
-                                                        </div>
+                                                                </div>
+                                                            </div>
                                                     </div>
                                                     <div class="col-sm-9">
                                                     <div class="container">

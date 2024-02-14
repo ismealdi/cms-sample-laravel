@@ -18,6 +18,11 @@
     <link rel="stylesheet" type="text/css" href="{{ url('tema/css/themify-icons.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ url('tema/css/flaticon.css') }}" />
 
+    
+    <link rel="stylesheet" href="{{asset('carousel/fonts/icomoon/style.css')}}">
+    <link rel="stylesheet" href="{{asset('carousel/css/owl.carousel.min.css')}}">
+
+    <link rel="stylesheet" type="text/css" href="{{ url('tema/css/prettyPhoto.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('tema/css/shortcodes.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('tema/css/main.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('tema/css/responsive.css') }}">
@@ -96,6 +101,10 @@
 <script src="{{asset('tema/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
 <script src="{{asset('tema/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
 
+<script src="{{asset('carousel/js/popper.min.js')}}"></script>
+<script src="{{asset('carousel/js/owl.bootstrap.min.js')}}"></script>
+<script src="{{asset('carousel/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('carousel/js/main.js')}}"></script>
 
 
 </html>

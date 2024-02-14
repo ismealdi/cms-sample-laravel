@@ -125,8 +125,8 @@
 	.ttm-stickable-header.fixed-header .ttm-header-icons, .ttm-stickable-header.fixed-header .ttm-header-icon,
 	#site-header-menu .ttm-stickable-header.fixed-header #site-navigation > .menu > ul > li > a,
 	.fixed-header .ttm-header-text-area{ 
-		height: 70px; 
-		line-height: 70px;
+		height: 100px; 
+		line-height: 100px;
 	}
 
 

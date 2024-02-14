@@ -3,20 +3,9 @@
 
 @section('statusbar', true)
 @section("content")
-@include('layouts.components.web.titlepelatihan')
+@include('layouts.components.web.filelaporan')
 
 
-
-<link rel="stylesheet" href="{{asset('carousel/fonts/icomoon/style.css')}}">
-
-<link rel="stylesheet" href="{{asset('carousel/css/owl.carousel.min.css')}}">
-
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="{{asset('carousel/css/bootstrap.min.css')}}">
-
-<!-- Style -->
-<link rel="stylesheet" href="{{asset('carousel/css/folder.css')}}">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 
 <div class="content py-4 d-flex justify-center">
@@ -55,12 +44,7 @@
 </div>
 </div>
 
-<script src="{{asset('carousel/js/jquery-3.3.1.min.js')}}"></script>
-<script src="{{asset('carousel/js/popper.min.js')}}"></script>
-<script src="{{asset('carousel/js/owl.bootstrap.min.js')}}"></script>
-<script src="{{asset('carousel/js/owl.carousel.min.js')}}"></script>
-<script src="{{asset('carousel/js/main.js')}}"></script>
-<!-- wrap-acadion -->
+
 
 
 
