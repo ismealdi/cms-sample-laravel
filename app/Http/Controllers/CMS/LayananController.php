@@ -23,6 +23,8 @@ class LayananController extends CmsController
     public function index()
     {
         $data = $this->layananRepository->all();
+        $data = Layanan::paginate(3)->withQueryString();
+        $data->appends(request()->query());
 
         return view('cms.layanan.index', compact('data'));
     }

@@ -64,6 +64,9 @@
                 </tr>
                 @endforeach
             </tbody>
+            <div class="ttm-pagination">
+                {{ $data->links() }}
+            </div>
         </table>
     </div>
 </div>
