@@ -2,7 +2,7 @@
 @section('title', 'News')
 @section('subheader', true)
 @section('buttons')
-<a href="{{ route('cms.clayanan.create') }}" class="btn btn-light-primary font-weight-bold ml-2">Add berita</a>
+<a href="{{ route('cms.clayanan.create') }}" class="btn btn-light-primary font-weight-bold ml-2">Add layanan</a>
 @endsection
 @section('pagination-sample')
 

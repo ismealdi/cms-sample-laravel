@@ -154,7 +154,7 @@
                         <div class="section-title with-desc clearfix">
                             <div class="title-header">
                                 <h5>Bersama Wujudkan Kehatan Merata</h5>
-                                <h1 class="title">Layanan Unggulan Kami</h1>
+                                <h2 class="title">Layanan Unggulan Kami</h2>
                             </div>
                             
                         </div><!-- section-title end -->

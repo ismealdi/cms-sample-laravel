@@ -46,7 +46,7 @@
             <div class="form-group row">
                 <input type="hidden" name="image_file" id="image_base64" />
                 <div class="col-lg-12">
-                    <label>Banner</label><br />
+                    <label>Banner Max Size 1MB Ukuran 16:9</label><br />
                     <div class="image-input w-100" id="image_file">
                         <div class="image-input-wrapper"
                             style="background-color: whitesmoke !important; min-width: 100%;height: 240px;object-position: center;">

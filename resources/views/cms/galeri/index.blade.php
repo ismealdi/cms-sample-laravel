@@ -27,7 +27,7 @@
                             <!--begin::Navigation-->
                             <ul class="navi navi-hover">
                                 <li class="navi-item">
-                                    <a href="{{ route('cms.slider.edit', $item->id) }}" class="navi-link">
+                                    <a href="{{ route('cms.galeri.edit', $item->id) }}" class="navi-link">
                                         <span class="navi-text">
                                             Edit
                                         </span>
@@ -35,7 +35,7 @@
                                 </li>
                                 <li class="navi-item">
                                     <a class="navi-link delete"
-                                        data-route="{{ route('cms.slider.destroy', $item->id) }}">
+                                        data-route="{{ route('cms.galeri.destroy', $item->id) }}">
                                         <span class="navi-text text-danger">
                                             Delete
                                         </span>
