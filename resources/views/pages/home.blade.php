@@ -151,10 +151,17 @@
                 <div class="row">
                     <div class="col-lg-9 col-md-12">
                         <!-- section-title -->
+<<<<<<< HEAD
                         <div class="section-title with-desc clearfix ">
                             <div class="title-header ">
                                 <h5>Bersama Wujudkan Kesehatan Merata</h5>
                                 <h3 class="title">Layanan Unggulan Kami</h3>
+=======
+                        <div class="section-title with-desc clearfix">
+                            <div class="title-header">
+                                <h5>Bersama Wujudkan Kehatan Merata</h5>
+                                <h2 class="title">Layanan Unggulan Kami</h2>
+>>>>>>> eb5f237143d5faa023b72175e5d532de8f4db05a
                             </div>
                             
                         </div><!-- section-title end -->

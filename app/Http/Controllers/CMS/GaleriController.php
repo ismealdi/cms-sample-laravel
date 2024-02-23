@@ -4,7 +4,6 @@ namespace App\Http\Controllers\CMS;
 
 use App\Models\Galeri;
 use Illuminate\Http\Request;
-use App\Http\Requests\SliderRequest;
 use App\Repositories\GaleriRepository;
 
 class GaleriController extends CmsController
