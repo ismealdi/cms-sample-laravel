@@ -8,7 +8,7 @@
             @endforeach
         </ul>
     </li>
-    <li class="has-submenu {{ ((Request::is('berita*') || Request::is('galeri*')) ? 'active' : '') }}" style=""><a href="#">Berita</a>
+    <li class="has-submenu {{ ((Request::is('berita*') || Request::is('galeri*')) ? 'active' : '') }}" style=""><a href="{{url('/berita/')}}">Berita</a>
         <ul class="sub-menu">
             @foreach(\App\Models\Category::all() as $item)
             <li class="{{ (Request::is('berita/'.$item->slug.'*') ? 'active' : '') }}"><a href="{{url('/berita/'.$item->slug )}}">{{ $item->name }}</a></li>
@@ -20,18 +20,18 @@
         <ul class="sub-menu">
             <li class="has-submenu" style=""><a href="#">Pendaftaran Online</a>
                 <ul class="sub-menu">
-                    <li><a href="#">Pendaftaran Pasien</a></li>
-                    <li><a href="#">Pendaftaran Melalui WA</a></li>
-                    <li><a href="#">Tempat Tidur Online </a></li>
+                    <li><a href="http://sapa.rspg-cisarua.co.id/">Pendaftaran Pasien</a></li>
+                    <li><a href="https://api.whatsapp.com/send/?phone=6282168000706&text&type=phone_number&app_absent=0">Pendaftaran Melalui WA</a></li>
+                    <li><a href="http://sapa.rspg-cisarua.co.id/room-availability">Tempat Tidur Online </a></li>
                 </ul>
             </li>
                     
-            <li><a href="#">Jadwal Dokter </a></li>
-            <li><a href="#">Konsultasi Dokter</a></li>
-            <li><a href="#">Info Lelang</a></li>
+            <li><a href="http://sapa.rspg-cisarua.co.id/">Jadwal Dokter </a></li>
+            <li><a href="http://sapa.rspg-cisarua.co.id/">Konsultasi Dokter</a></li>
+            <li><a href="">Info Lelang</a></li>
             <li><a href="#">Karir</a></li>
             <li><a href="#">Reservasi Gedung</a></li>
-            <li><a href="#">Jam Kunjungan Pasien</a></li>
+            <li><a href="http://sapa.rspg-cisarua.co.id/">Jam Kunjungan Pasien</a></li>
             <li><a href="{{url('/laporan')}}">Laporan</a></li>
         </ul>
     </li>
@@ -45,9 +45,9 @@
     <li><a href="#">Survei dan Aduan</a>
         <ul class="sub-menu">
             <li><a href="#">Survei Kepuasan Masyrakat</a></li>
-            <li><a href="#">WBS</a></li>
+            <li><a href="https://wbs.kemkes.go.id/">WBS</a></li>
             <li><a href="#">LAKSA</a></li>
-            <li><a href="#">SIAP Kemenkes</a></li>
+            <li><a href="https://siap.kemkes.go.id/#!/log/in">SIAP Kemenkes</a></li>
             <li><a href="#">SP4N Lapor</a></li>
         </ul>
     </li>

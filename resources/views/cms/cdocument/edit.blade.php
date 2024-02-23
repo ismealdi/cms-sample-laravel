@@ -14,7 +14,7 @@
         <div class="card-toolbar">
         </div>
     </div>
-    {!! Form::model($data, array('route' => array('cms.cdcoument.update', $data->id, 'class' =>
+    {!! Form::model($data, array('route' => array('cms.cdocument.update', $data->id, 'class' =>
     'form'))) !!}
     @method('PUT')
     

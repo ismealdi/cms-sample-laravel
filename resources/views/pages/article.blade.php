@@ -1,6 +1,6 @@
 <!--page start-->
 @extends('layouts.base')
-@section('title')
+@section('title', "Berita")
 
 @section('statusbar', true)
 @section("content")
@@ -241,19 +241,7 @@
                                 @endforeach
                             </ul>
                         </aside>
-                        <aside class="widget widget-text">
-                            <div class="ttm_info_widget">
-                                <div class="icon"><i class="themifyicon ti-headphone"></i></div>
-                                <div class="title">
-                                    <h3>Let's Help You!</h3>
-                                </div>
-                                <div class="content">14 Tottenham Court Road<br>Bulls Stadium, Califorina <br>1234, USA
-                                    <br>
-                                    <a href="mailto:info@example.com.com">info@example.com</a>
-                                </div><br>
-                                <a class="view_more" href="#">View More</a>
-                            </div>
-                        </aside>
+                        
                     </div>
                 </div><!-- row end -->
             </div>

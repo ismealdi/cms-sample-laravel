@@ -51,7 +51,7 @@ class GaleriController extends CmsController
     /**
      * Display the specified resource.
      */
-    public function show(Slider $slider)
+    public function show(Galeri $slider)
     {
         //
     }
@@ -63,7 +63,7 @@ class GaleriController extends CmsController
     {
         $data = $this->galeriRepository->find($id);
 
-        return view('cms.slider.edit', compact('data'));
+        return view('cms.galeri.edit', compact('data'));
     }
 
     /**
@@ -76,7 +76,7 @@ class GaleriController extends CmsController
         $input = $request->all();
         $slider = $this->galeriRepository->update($input, $id);
 
-        return redirect()->route('cms.slider.index');
+        return redirect()->route('cms.galeri.index');
     }
 
     /**

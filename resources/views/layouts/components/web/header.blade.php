@@ -74,43 +74,7 @@
             </div>
         </div>
     </div>
-    <div class="ttm-content-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="ttm-info-widget">
-                        <div class="header-widget">
-                            <div class="header-icon">
-                                <i class="fa fa-hospital-o"></i>
-                            </div>
-                            <div class="header-content">
-                                <h3>Rumah Sakit Nomor 1</h3>
-                                <p>di Cisarua</p>
-                            </div>
-                        </div>
-                        <div class="header-widget">
-                            <div class="header-icon">
-                                <i class="fa fa-user-md"></i>
-                            </div>
-                            <div class="header-content">
-                                <h3>Kabinet Pribadi</h3>
-                                <p>Staf Berkualitas</p>
-                            </div>
-                        </div>
-                        <div class="header-widget">
-                            <div class="header-icon">
-                                <i class="fa fa-thumbs-o-up"></i>
-                            </div>
-                            <div class="header-content">
-                                <h3>Dapatkan Hasil Online</h3>
-                                <p>Pasien Puas</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="ttm-contact">
-                        <span class="icon"><i class="fa fa-phone"></i></span>Call Center IGD (0251) 8253629
-                    </div>
+    
                 </div>
             </div>
         </div>

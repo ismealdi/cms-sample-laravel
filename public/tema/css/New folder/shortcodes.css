@@ -54,12 +54,12 @@
     1.ttm-row
 ------------------------*/
 
-.ttm-row{ padding: 95px 0;}
+.ttm-row{ padding: 95px 0; position: relative; right: 15px;}
 .ttm-row.row-top-section{ padding: 0 0; }
 .ttm-row.about-section{ padding: 100px 0 45px; }
 .ttm-row.broken-section{ padding: 0 0; }
 .ttm-row.services-section{ padding: 125px 0 51px; }
-.ttm-row.cta-section{ padding: 0 0; }
+.ttm-row.cta-section{ paddin g: 0 0; }
 .ttm-row.client-section{ padding: 85px 0 30px; }
 .ttm-row.blog-section{ padding: 92px 0 100px; }
 .ttm-row.introduction-section{ padding: 100px 0 100px; }
@@ -290,6 +290,7 @@
 .section-title{ 
     position: relative; 
     margin-bottom: 18px;
+    left: 20px;
 }
 .section-title h5{
     font-family: "Saira",Arial,Helvetica,sans-serif;
@@ -311,7 +312,7 @@
     margin-bottom: 5px;
 }
 .row-title h2.title {
-    font-size: 40px;
+    font-size: 35px;
     line-height: 49px;
 }
 .row-title h5{
@@ -428,7 +429,7 @@
 }
 
 /** btn-size-md **/
-.ttm-btn.ttm-btn-size-md { font-size: 13px; padding: 13px 30px 13px 30px; }
+.ttm-btn.ttm-btn-size-md { font-size: 16px; padding: 13px 30px 13px 30px; }
 .ttm-btn.ttm-btn-size-md.ttm-icon-btn-right { padding-right: 48px; }
 .ttm-btn.ttm-btn-size-md.ttm-icon-btn-left{ padding-left: 48px; }
 .ttm-btn.ttm-btn-size-md.ttm-icon-btn-left i{ left: 20px;}
@@ -453,7 +454,7 @@
 
 /** btn-shape **/
 .ttm-btn.ttm-btn-shape-round { border-radius: 2em; }
-.ttm-btn.ttm-btn-shape-rounded { border-radius: 5px; }
+.ttm-btn.ttm-btn-shape-rounded { border-radius: 10px; }
 .ttm-btn.ttm-btn-shape-square { border-radius: 0; }
 
 /** btn-style-border **/
@@ -612,7 +613,7 @@
 .ttm-icon.ttm-icon_element-size-md i { font-size: 30px; }
 
 /** icon-size-lg **/
-.ttm-icon.ttm-icon_element-size-lg { height: 58px; width: 60px; line-height: 60px; }
+.ttm-icon.ttm-icon_element-size-lg { height: 58px; width: 60px; line-height: 60px; left: 100%; }
 .ttm-icon.ttm-icon_element-size-lg i { font-size: 45px; }
 
 /** icon-shape **/
@@ -3559,3 +3560,7 @@ ul.payment_methods {
     outline: none!important;
     -webkit-font-smoothing: antialiased;
 }
+
+ .font-impor{
+            color: #033b4a !important;
+        }

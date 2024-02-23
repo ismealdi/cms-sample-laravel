@@ -1,6 +1,6 @@
 @extends('layouts.base')
-@section('title', 'Berita ' . (isset($category) ? $category->name : ''))
-@section('titlebar', false)
+@section('title', 'Berita ')
+@section('titlebar', true)
 @section('statusbar', true)
 @section("content")
 
@@ -12,7 +12,7 @@
                 <div class="col-md-12">
                     <div class="title-box ttm-textcolor-white">
                         <div class="page-title-heading">
-                            <h1 class="title">{{ isset($category) ? $category->name : ''}}</h1>
+                            <h1 class="title">{{ isset($category) ? $category->name : 'Semua Berita'}}</h1>
                         </div><!-- /.page-title-captions -->
                         <div class="breadcrumb-wrapper">
                             <div class="container">
@@ -69,7 +69,7 @@
                                     </div>
                                     <header class="entry-header">
                                         <h2 class="entry-title"><a
-                                                href="{{ url('berita/'.$article->category->slug.'/'.$article->slaug) }}">{{
+                                                href="{{ url('berita/'.(isset($item->category) ? $item->category->slug : 'x').'/'.$article->slaug) }}">{{
                                                 strip_tags($article->title) }}</a>
                                         </h2>
                                     </header>
@@ -82,7 +82,7 @@
                                         <div class="ttm-blogbox-footer-readmore">
                                             <div class="ttm-blogbox-footer-left">
                                                 <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-black"
-                                                    href="{{ url('berita/'.$article->category->slug.'/'.$article->slaug) }}">READ
+                                                    href="{{ url('berita/'.(isset($article->category) ? $article->category->slug : 'x').'/'.$article->slaug) }}">READ
                                                     MORE</a>
                                             </div>
                                         </div>
@@ -130,11 +130,11 @@
                             <ul class="widget-post ttm-recent-post-list">
                                 @foreach($popular as $item)
                                 <li>
-                                    <a href="{{ url('berita/'.$item->category->slug.'/'.$item->slaug) }}"><img
+                                    <a href="{{ url('berita/'.(isset($item->category) ? $item->category->slug : 'x').'/'.$item->slaug) }}"><img
                                             src="{{ asset('storage/services/'.$item->banner) }}" alt="post-img"></a>
                                     <span class="post-date">{{
                                         $item['post-date']->format('M d, Y') }}</span>
-                                    <a href="{{ url('berita/'.$item->category->slug.'/'.$item->slaug) }}">{{
+                                    <a href="{{ url('berita/'.(isset($item->category) ? $item->category->slug : 'x').'/'.$item->slaug) }}">{{
                                         $item->title }}</a>
                                 </li>
                                 @endforeach

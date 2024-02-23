@@ -27,7 +27,7 @@
     <!--begin::Header Mobile-->
     <div id="kt_header_mobile" class="header-mobile bg-primary header-mobile-fixed">
         <!--begin::Logo-->
-        <a href="index.html">
+        <a href="{{url('/home/')}}">
             <img alt="Logo" src="{{ url('assets/medias/logo.png') }}" class="max-h-30px" />
         </a>
         <!--end::Logo-->

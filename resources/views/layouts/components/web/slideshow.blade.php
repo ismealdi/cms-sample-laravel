@@ -4,7 +4,7 @@
                         <div class="section-title text-center res-991-pt-30">
                             <div class="title-header">
                                 <h5>Perusahaan </h5>
-                                <h2 class="title">Berkeja Sama Dengan Kami</h2>
+                                <h2 class="title">Berkerja Sama Dengan Kami</h2>
                             </div>
                         </div><!-- section-title end -->
                     

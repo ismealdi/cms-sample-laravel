@@ -53,7 +53,7 @@ class CdocumentController extends CmsController
     public function edit(String $id)
     {
         $data =$this->cdocumentRepository->find($id);
-        return view('cms.category.edit', compact('data'));
+        return view('cms.cdocument.edit', compact('data'));
     }
 
     /**

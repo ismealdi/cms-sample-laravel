@@ -77,74 +77,39 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row pt-15 mb_10">
-                                    <div class="col-sm-12">
-                                        <h4>Our Special Doctors</h4>
-                                        <div class="sep_holder_box width-100 mb-20">
-                                            <span class="sep_holder"><span class="sep_line"></span></span>
-                                            <span class="sep_holder"><span class="sep_line"></span></span>
-                                        </div>
-                                        <div class="row ttm-boxes-row-wrapper">
-                                            <div class="col-sm-4 ttm-box-col-wrapper">
-                                                <!-- featured-imagebox-team -->
-                                                <div class="featured-imagebox featured-imagebox-team ttm-team-box-view-overlay">
-                                                    <div class="featured-thumbnail">
-                                                        <img class="img-fluid" src="images/team-member/team-img01.jpg" alt="image"> 
-                                                    </div> 
-                                                    <div class="ttm-box-view-overlay">
-                                                        <div class="featured-iconbox ttm-media-link">
-                                                            <a href="team-details.html"><i class="ti ti-plus"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="featured-content featured-content-team">
-                                                        <div class="ttm-team-position">Senior Dr. at Delmont</div>
-                                                        <div class="featured-title">
-                                                            <h5><a href="team-details.html">Dr. Metthew Wood</a></h5>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- featured-imagebox-team end-->
+                                <section class="ttm-row break-991-colum ttm-bgcolor-white clearfix py-0">
+                                    <div class="container col-lg-12">
+                                        <div class="row ">
+                                            <div class="col-lg-12 ">
+                                                <!-- wrap-acadion -->
+                                                <div class="wrap-acadion">
+                                                    <div class="accordion">
+                                                        <div class="toggle ttm-style-classic ttm-toggle-title-bgcolor-grey">
+                                                            <div class="toggle-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                                                    <span class="ttm-title-text">Informasi dan Tata Cara Pendaftaran </span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="toggle-content">
+                                                                <h6>First appointment, please bring the following:</h6>
+                                                                <ul>
+                                                                    <li>Insurance card</li>
+                                                                    <li>A picture Photo</li>
+                                                                    <li>Any previous medical records (including test results from other clinics)</li>
+                                                                    <li>All current medications (with prescription )</li>
+                                                                </ul>
+                                                                <h6>Repeat Patient Appointments</h6>
+                                                                <ul><li>All current medications (with prescription )</li></ul>
+                                                            </div>
+                                                        </div><!-- toggle end -->
+                                                        <!-- toggle -->
+                                                        <!-- toggle end -->
+                                                    </div>                   
+                                                </div><!-- wrap-acadion end-->
                                             </div>
-                                            <div class="col-sm-4 ttm-box-col-wrapper">
-                                                <!-- featured-imagebox-team -->
-                                                <div class="featured-imagebox featured-imagebox-team ttm-team-box-view-overlay">
-                                                    <div class="featured-thumbnail">
-                                                        <img class="img-fluid" src="images/team-member/team-img02.jpg" alt="image">
-                                                    </div> 
-                                                    <div class="ttm-box-view-overlay">
-                                                        <div class="featured-iconbox ttm-media-link">
-                                                            <a href="team-details.html"><i class="ti ti-plus"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="featured-content featured-content-team">
-                                                        <div class="ttm-team-position">Cardiologist Specialist</div>
-                                                        <div class="featured-title">
-                                                            <h5><a href="team-details.html">Dr. Roy Coleman</a></h5>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- featured-imagebox-team end-->
-                                            </div>
-                                            <div class="col-sm-4 ttm-box-col-wrapper">
-                                                <!-- featured-imagebox-team -->
-                                                <div class="featured-imagebox featured-imagebox-team ttm-team-box-view-overlay">
-                                                    <div class="featured-thumbnail">
-                                                        <img class="img-fluid" src="images/team-member/team-img03.jpg" alt="image"> 
-                                                    </div>
-                                                    <div class="ttm-box-view-overlay">
-                                                        <div class="featured-iconbox ttm-media-link">
-                                                            <a href="team-details.html"><i class="ti ti-plus"></i></a>
-                                                        </div>
-                                                    </div> 
-                                                    <div class="featured-content featured-content-team">
-                                                        <div class="ttm-team-position">Neurology Specialist</div>
-                                                        <div class="featured-title">
-                                                            <h5><a href="team-details.html">Dr. Andrew Bert</a></h5>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- featured-imagebox-team end-->
-                                            </div>
-                                        </div>
+                                        </div><!-- row end -->
                                     </div>
-                                </div>
+                                </section>
                             </div>
                         </div>
                     </div>

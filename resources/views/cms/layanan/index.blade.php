@@ -63,10 +63,15 @@
                     </td>
                 </tr>
                 @endforeach
+                <div class="ttm-pagination">
+                {!! $data->links() !!}
+                </div>
             </tbody>
         </table>
+
     </div>
 </div>
+
 
 @endsection
 @push("script")
@@ -76,5 +81,7 @@
     onDeleted = function (route) {
         $("div").find("[data-route='item-data-" + route.split("/").pop() + "']").remove();
     }
+
+    
 </script>
 @endpush

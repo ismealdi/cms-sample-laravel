@@ -54,11 +54,11 @@
     1.ttm-row
 ------------------------*/
 
-.ttm-row{ padding: 95px 0;}
+.ttm-row{ padding: 95px 0; position: relative; right: 15px;}
 .ttm-row.row-top-section{ padding: 0 0; }
 .ttm-row.about-section{ padding: 100px 0 45px; }
 .ttm-row.broken-section{ padding: 0 0; }
-.ttm-row.services-section{ padding: 125px 0 51px; }
+.ttm-row.services-section{ padding: 75px; background: transparent; height: 590px; }
 .ttm-row.cta-section{ padding: 0 0; }
 .ttm-row.client-section{ padding: 85px 0 30px; }
 .ttm-row.blog-section{ padding: 92px 0 100px; }
@@ -109,13 +109,15 @@
     position: absolute;
     height: 100%;
     width: 100%; 
-    top: 0;
+    top: 50px;
     left: 0;
 }
 .ttm-left-span .ttm-col-wrapper-bg-layer {
     width: auto;
     margin-left: -100px;
     right: 0;
+    height: 70%;
+    top: 10%;
 }
 .ttm-right-span .ttm-col-wrapper-bg-layer {
     width: auto;
@@ -290,6 +292,7 @@
 .section-title{ 
     position: relative; 
     margin-bottom: 18px;
+    left: 20px;
 }
 .section-title h5{
     font-family: "Saira",Arial,Helvetica,sans-serif;
@@ -317,7 +320,7 @@
 .row-title h5{
     margin-bottom: 10px;
 }
-.section-title.with-desc { margin-bottom: 40px; }
+.section-title.with-desc { margin-bottom: 70px; }
 .section-title.with-desc .title-desc{ margin-top: 6px; display: inline-block; }
 
 

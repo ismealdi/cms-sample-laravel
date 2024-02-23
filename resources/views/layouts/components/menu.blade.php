@@ -59,20 +59,58 @@
         </a>
         <div class="menu-submenu menu-submenu-classic menu-submenu-left">
             <ul class="menu-subnav">
-                <li class="menu-item menu-item-activex" aria-haspopup="true">
-                    <a href="{{ route('cms.category.index') }}" class="menu-link">
-                        <span class="menu-text">Katagori</span><span class="menu-desc"></span>
+                <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <span class="menu-text">Berita</span>
+                        <i class="menu-arrow"></i>
                     </a>
+                    <div class="menu-submenu menu-submenu-classic menu-submenu-right">
+                        <ul class="menu-subnav">
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="{{ route('cms.category.index') }}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">Kategori Berita</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="{{ route('cms.news.index') }}" class="menu-link ">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">Update Berita</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="menu-item " aria-haspopup="true">
-                    <a href="{{ route('cms.news.index') }}" class="menu-link ">
-                        <span class="menu-text">Berita</span><span class="menu-desc"></span>
+                    <a href="{{ route('cms.galeri.index') }}" class="menu-link">
+                        <span class="menu-text">Galery</span><span class="menu-desc"></span>
                     </a>
                 </li>
-                <li class="menu-item " aria-haspopup="true">
-                    <a href="{{ route('cms.category.index') }}" class="menu-link ">
-                        <span class="menu-text"></span><span class="menu-desc"></span>
+                <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                    
+                        <span class="menu-text">Layanan</span>
+                        <i class="menu-arrow"></i>
                     </a>
+                    <div class="menu-submenu menu-submenu-classic menu-submenu-right ">
+                        <ul class="menu-subnav">
+                            <li class="menu-item">
+                                <a href="{{ route('cms.clayanan.index') }}" class="menu-link">
+                                    <span class="menu-text">Kategori Pelayanan</span><span class="menu-desc"></span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('cms.layanan.index') }}" class="menu-link ">
+                                    <span class="menu-text">Jenis Pelayanan</span><span class="menu-desc"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
                 </li>
             </ul>
         </div>

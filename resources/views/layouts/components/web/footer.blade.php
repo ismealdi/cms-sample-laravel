@@ -104,12 +104,12 @@
                     <div class="widget style2 widget-out-link clearfix">
                         <h3 class="widget-title">Berita Terbaru</h3>
                         <ul class="widget-post ttm-recent-post-list">
-                        @foreach(\App\Models\News::all() as $item)
-                        <li><a href="{{url('/berita/'.$item->slug )}}"><img
+                        @foreach(\App\Models\News::latest()->take(3)->get() as $item)
+                        <li><a href="{{url('/berita/'.$item->slaug )}}"><img
                                 src="{{ asset('storage/services/'.$item->banner) }}" alt="post-img"></a>
                                 <span class="post-date">{{
                                         $item['post-date']->format('M d, Y') }}</span>
-                                    <a href="{{ url('berita/'.$item->category->slug.'/'.$item->slaug) }}">{{
+                                    <a href="{{ url('berita/'.(isset($item->category) ? $item->category->slug : 'x').'/'.$item->slaug) }}">{{
                                         $item->title }}</a>
                             </li>
                         @endforeach

@@ -25,9 +25,11 @@
 // Rows contain and clear the floats of your columns.
 
 @if $enable-grid-classes {
-  .row {
+  .row1 {
     @include make-row();
   }
+
+
 
   // Remove the negative margin from default .row, then the horizontal padding
   // from all immediate children columns (to prevent runaway style inheritance).

@@ -19,7 +19,7 @@
             <div class="row">
                 @foreach($documents as $document)
                 <div class="col-lg-3 col-xl-3">
-                    <a href="{{ url('laporan/'.$document->slug) }}" class="file-img-box"><img src="{{url('/images/folder.png')}}" alt="icon" width="180">
+                    <a href="{{ url('laporan/'.$document->slug) }}" class="file-img-box"><img src="{{url('/images/folderrspgv2.png')}}" alt="icon" width="180">
                     </a>
                     <div class="file-man-title">
                         <h5 class="mb-0 text-overflow">{{ ucwords($document->name) }}</h5>

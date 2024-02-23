@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\NewsRequest;
 use App\Repositories\ClayananRepository;
 use App\Repositories\LayananRepository;
-
+use Illuminate\Cache\RateLimiting\Limit;
 
 class LayananController extends CmsController
 {
@@ -23,6 +23,8 @@ class LayananController extends CmsController
     public function index()
     {
         $data = $this->layananRepository->all();
+    
+        $data = Layanan::paginate(5);
 
         return view('cms.layanan.index', compact('data'));
     }
@@ -43,7 +45,8 @@ class LayananController extends CmsController
     {
         $input = $request->all();
         $layanan = $this->layananRepository->create($input);
-
+        
+        
         return redirect()->route('cms.layanan.index');
     }
 

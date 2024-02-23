@@ -8,7 +8,7 @@
                 </li>
                 <li><i class="themifyicon ti-timer"></i>IGD : 24 Jam</li>
             </ul>
-            <div class="topbar-right text-right">
+            <!--<div class="topbar-right text-right">
                 <div class="ttm-social-links-wrapper list-inline">
                     <ul class="social-icons">
                         <li><a href="#"><i class="fa fa-facebook"></i></a>
@@ -20,10 +20,13 @@
                         <li><a href="#"><i class="fa fa-linkedin"></i></a>
                         </li>
                     </ul>
-                </div>
+                </div>-->
                 <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-skincolor"
-                    href="#">Pendaftaran Online</a>
+                    href="#">Call Center IGD (0251) 8253629</a>
             </div>
+            <!--<div class="ttm-contact ">
+                        <span class="icon"><i class="fa fa-phone"></i></span>Call Center IGD (0251) 8253629
+                    </div>-->
         </div>
     </div>
 </div>

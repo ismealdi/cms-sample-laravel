@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="keywords" content="RSPG" />
-    <meta name="description" content="RSPG &#8211; Rumah Sakit Paru Dr. M. Goenawan Partowidigdo" />
+    <meta name="description" content="RSPG &#8211; Rumah Sakit Paru Goenawan Partowidigdo" />
     <meta name="author" content="Iman Ifa" />
 
     <link rel="shortcut icon" href="images/favicon.png" />
@@ -43,7 +43,7 @@
         <section class="ttm-row row-top-section clearfix">
             @hasSection('titlebar')
             <div class="container p-5">
-                <h1>@yield("title",)</h1>
+                
 
 
             </div>

@@ -30,7 +30,7 @@
                             {{ $item->slaug }}
                         </span>
                     </td>
-                    <td>{{ $item->category->name }}</td>
+                    <td class="py-4">{{ isset($item->category) ? ucwords($item->category->name) : "-" }}</td>
 
                     <td>
                         <div class="dropdown dropdown-inline">

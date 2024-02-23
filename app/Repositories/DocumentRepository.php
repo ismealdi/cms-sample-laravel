@@ -76,7 +76,7 @@ class DocumentRepository extends BaseRepository
         $query = $this->model->newQuery();
         $model = $query->findOrFail($id);
 
-        $filepath = storage_path('App/public/Document', $model->file);
+        $filepath = storage_path('App/public/docpdf', $model->file);
 
         if(File::exists($filepath)){
             file::delete($filepath);
