@@ -1039,7 +1039,7 @@ a {
 }
 
 .mt_45 {
-    margin-top: -45px !important;
+    margin-top: -20px !important;
 }
 
 .mt_50 {
@@ -4499,7 +4499,6 @@ a {
             background-color: #1dc6a1;
         }
 
-<<<<<<< HEAD
         .row-set{
             --bs-gutter-x: -8rem;
     --bs-gutter-y: -3rem;
@@ -4512,8 +4511,3 @@ a {
         .font-impor{
             color: #033b4a !important;
         }
-=======
-
-
-        
->>>>>>> eb5f237143d5faa023b72175e5d532de8f4db05a

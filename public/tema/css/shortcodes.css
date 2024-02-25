@@ -58,7 +58,7 @@
 .ttm-row.row-top-section{ padding: 0 0; }
 .ttm-row.about-section{ padding: 100px 0 45px; }
 .ttm-row.broken-section{ padding: 0 0; }
-.ttm-row.services-section{ padding: 75px; background: transparent; height: 590px; }
+.ttm-row.services-section{ padding: 75px; background: transparent; }
 .ttm-row.cta-section{ padding: 0 0; }
 .ttm-row.client-section{ padding: 85px 0 30px; }
 .ttm-row.blog-section{ padding: 92px 0 100px; }
@@ -79,7 +79,7 @@
 .ttm-row.expertise-section { padding: 55px 0 35px; }
 .ttm-row.cta-form-section{ padding: 60px 0 60px; }
 .ttm-row.product-section{ padding: 0 0 125px; }
-.ttm-row.quote_fea-section { padding: 0 0 95px; }
+.ttm-row.quote_fea-section {  }
 .ttm-row.team_2-section { padding: 181px 0 85px; }
 
 
@@ -919,7 +919,7 @@
     opacity: 1;
 }
 
-.featured-icon-box.style5{ border: 1px solid #184d5b; padding: 40px 35px 20px 30px; position: relative; overflow: hidden;}
+.featured-icon-box.style5{  padding: 40px 35px 20px 30px; position: relative; overflow: hidden;}
 .featured-icon-box.style5 .featured-icon{ margin-bottom: 30px; }
 .featured-icon-box.style5 .ttm-icon.ttm-icon_element-size-lg i{ font-size: 50px; }
 .featured-icon-box.style5:hover{
@@ -3559,4 +3559,12 @@ ul.payment_methods {
     cursor: pointer;
     outline: none!important;
     -webkit-font-smoothing: antialiased;
+}
+
+.section-title-info{ 
+    position: relative; 
+    margin-bottom: 18px;
+    left: 20px;
+    top: 20px;
+    
 }

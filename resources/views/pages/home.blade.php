@@ -151,17 +151,10 @@
                 <div class="row">
                     <div class="col-lg-9 col-md-12">
                         <!-- section-title -->
-<<<<<<< HEAD
-                        <div class="section-title with-desc clearfix ">
-                            <div class="title-header ">
-                                <h5>Bersama Wujudkan Kesehatan Merata</h5>
-                                <h3 class="title">Layanan Unggulan Kami</h3>
-=======
                         <div class="section-title with-desc clearfix">
                             <div class="title-header">
                                 <h5>Bersama Wujudkan Kehatan Merata</h5>
                                 <h2 class="title">Layanan Unggulan Kami</h2>
->>>>>>> eb5f237143d5faa023b72175e5d532de8f4db05a
                             </div>
                             
                         </div><!-- section-title end -->
@@ -257,16 +250,16 @@
             </div>
         </div>
         </div>
-       <div class="ttm-row quote_fea-section clearfix">
+      <div class="ttm-row quote_fea-section clearfix">
             <div class="container">
                 <!-- row -->
                 <div class="row">
                     <div class="ccol-lg-7 col-md-8 col-sm-9 m-auto ">
                         <!-- section-title -->
-                        <div class="section-title text-center">
-                            <div class="title-header py-5">
+                        <div class="section-title-info text-center">
+                            <div class="title-header ">
         
-                                <h3 class="title py-3">Informasi Pasien</h3>
+                                <h2 class="title-info">Informasi Pasien</h2>
                             </div>
                         </div><!-- section-title end -->
                     </div>

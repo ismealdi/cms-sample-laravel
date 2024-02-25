@@ -11,8 +11,8 @@
         <div class="owl-carousel owl-2">
           @foreach(\App\Models\Galeri::all() as $images)
           <div class="media-29101">
-            <a href="#"><img src="{{ asset('storage/galeri/'.$images->image) }}" alt="Image" class="img-fluid"></a>
-            <h3><a href="#">{{ $images->name }}</a></h3>
+            <a href="/galeri/"><img src="{{ asset('storage/galeri/'.$images->image) }}" alt="Image" class="img-fluid"></a>
+            <h3><a href="/galeri/">{{ $images->name }}</a></h3>
           
           </div>
           @endforeach
