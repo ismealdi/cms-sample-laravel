@@ -63,9 +63,6 @@
                     </td>
                 </tr>
                 @endforeach
-                <div class="ttm-pagination">
-                {!! $data->links() !!}
-                </div>
             </tbody>
             <div class="ttm-pagination">
                 {{ $data->links() }}

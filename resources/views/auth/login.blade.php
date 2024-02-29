@@ -66,5 +66,7 @@
         </div>
     </form>
 </div>
+
+
 <!--end::Login forgot password form-->
 @endsection

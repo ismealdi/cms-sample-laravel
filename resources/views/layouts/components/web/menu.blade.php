@@ -17,7 +17,7 @@
         </ul>
     </li>
     <li class="has-submenu" style=""><a href="#">Informasi Publik</a>
-        <ul class="sub-menu">
+        <ul class="sub-menu ">
             <li class="has-submenu" style=""><a href="#">Pendaftaran Online</a>
                 <ul class="sub-menu">
                     <li><a href="http://sapa.rspg-cisarua.co.id/">Pendaftaran Pasien</a></li>
@@ -44,11 +44,17 @@
     </li>
     <li><a href="#">Survei dan Aduan</a>
         <ul class="sub-menu">
-            <li><a href="#">Survei Kepuasan Masyrakat</a></li>
+        <li class="has-submenu" style=""><a href="http://survey.rspg-cisarua.co.id/">Index Kepuasan Masyarakat</a>
+                <ul class="sub-menu" style="left: -100%;">
+                    <li><a href="http://survey.rspg-cisarua.co.id/index1.php">Q. Survei Kepuasan Masyarakat (SKM) </a></li>
+                    <li><a href="http://survey.rspg-cisarua.co.id/laksarspg/">Q. LAyanan Kepuasan & SAran dari Masyrakat (LAKSA) </a></li>
+                    <li><a href="http://survey.rspg-cisarua.co.id/publish/">Hasil IKM </a></li>
+                </ul>
+        </li>
             <li><a href="https://wbs.kemkes.go.id/">WBS</a></li>
-            <li><a href="#">LAKSA</a></li>
             <li><a href="https://siap.kemkes.go.id/#!/log/in">SIAP Kemenkes</a></li>
             <li><a href="#">SP4N Lapor</a></li>
         </ul>
     </li>
-<li class="ttm-sepline" style="width: 106px; left: 0px; opacity: 1;"><span class="sep-img"></span></li></ul>
+<li class="ttm-sepline" style="width: 106px; left: 0px; opacity: 1;"><span class="sep-img"></span></li>
+</ul>

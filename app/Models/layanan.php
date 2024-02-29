@@ -21,7 +21,7 @@ class Layanan extends Model
 
     public function category(): HasOne
     {
-        return $this->hasOne(Clayanan::class, 'id','category_id');
+        return $this->hasOne(clayanan::class, 'id','category_id');
     }
 
 

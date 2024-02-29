@@ -42,32 +42,7 @@
                                     <div class="mb-35">
                                         {!! $service->content !!}    
                                     </div>
-                                    <h4>Our Best Services Included</h4>
-                                    <div class="sep_holder_box width-100 mb-20">
-                                        <span class="sep_holder"><span class="sep_line"></span></span>
-                                        <span class="sep_holder"><span class="sep_line"></span></span>
-                                    </div>
-                                    <!-- row -->
-                                    <div class="row mt-15 mb-15">
-                                        <div class="col-sm-6">
-                                            <ul class="ttm-list ttm-list-style-icon ttm-list-icon-color-skincolor ttm-textcolor-darkgrey">
-                                                <li><i class="fa fa-arrow-circle-right"></i><span class="ttm-list-li-content">Lorem ipsum dolor sit amet, consectetur.</span></li>
-                                                <li><i class="fa fa-arrow-circle-right"></i><span class="ttm-list-li-content">Nemo enim ipsam voluptatem voluptas.</span></li>
-                                                <li><i class="fa fa-arrow-circle-right"></i><span class="ttm-list-li-content">combined with handful of model sentence.</span></li>
-                                                <li><i class="fa fa-arrow-circle-right"></i><span class="ttm-list-li-content">accusantium doloremque laudantium.</span></li>
-                                                <li><i class="fa fa-arrow-circle-right"></i><span class="ttm-list-li-content">expedita distinctio. Nam libero tempore.</span></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <ul class="ttm-list ttm-list-style-icon ttm-list-icon-color-skincolor ttm-textcolor-darkgrey">
-                                                <li><i class="fa fa-arrow-circle-right"></i><span class="ttm-list-li-content">Lorem ipsum dolor sit amet, consectetur.</span></li>
-                                                <li><i class="fa fa-arrow-circle-right"></i><span class="ttm-list-li-content">Nemo enim ipsam voluptatem voluptas.</span></li>
-                                                <li><i class="fa fa-arrow-circle-right"></i><span class="ttm-list-li-content">combined with handful of model sentence.</span></li>
-                                                <li><i class="fa fa-arrow-circle-right"></i><span class="ttm-list-li-content">accusantium doloremque laudantium.</span></li>
-                                                <li><i class="fa fa-arrow-circle-right"></i><span class="ttm-list-li-content">expedita distinctio. Nam libero tempore.</span></li>
-                                            </ul>
-                                        </div>
-                                    </div><!-- row end -->
+                                    <!-- row end -->
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="mb-35">

@@ -45,6 +45,7 @@ Route::get('/layanan/{slug}', [App\Http\Controllers\WebController::class, 'layan
 Route::get('/layanan/{slug}/{slaug?}', [App\Http\Controllers\WebController::class, 'layananDetail'])->name('web.layanan.detail');
 Route::get('/galeri', [App\Http\Controllers\WebController::class, 'galeri'])->name('web.galeri');
 
+
 Route::get('/profile', function () {
     return view('pages.profile');
 });

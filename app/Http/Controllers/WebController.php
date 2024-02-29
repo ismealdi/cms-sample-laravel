@@ -87,7 +87,7 @@ class WebController extends Controller
         $category = null;
 
         if(isset($slug)) {
-            $category = Clayanan::whereSlug($slug)->first();
+            $category = clayanan::whereSlug($slug)->first();
         }
 
         $services = new Layanan();
@@ -96,7 +96,7 @@ class WebController extends Controller
             $services = $services->whereCategoryId($category->id);
         }
 
-        $services = $services->paginate(6);
+        $services = $services->paginate(17);
         $service = $services[0];
 
         return view('pages.layanan', compact('category', 'services', 'service'));
@@ -106,7 +106,7 @@ class WebController extends Controller
         $category = null;
 
         if(isset($slug)) {
-            $category = Clayanan::whereSlug($slug)->first();
+            $category = clayanan::whereSlug($slug)->first();
         }
 
         $services = new Layanan();

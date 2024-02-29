@@ -80,19 +80,19 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="section-title res-991-pt-30">
-                                    <h2 class="text-center ">Visi</h2>
+                                    <h2 class="text-center fs-4 ">Visi</h2>
                                     </div>
                                     <div class="container">
                                     <div class="row">
                                         <div class="text-center">
-                                        <h5 class="fst-italic fs-4"> Menjadi Center Pelayanan Paru dan Bedah Toraks Nasional </h5>
+                                        <h5 class="fst-italic fs-5"> Menjadi Center Pelayanan Paru dan Bedah Toraks Nasional </h5>
                                         </div>
                                         <div class="w-100 py-1"></div>
                                         <div class="section-title res-991-pt-30">
-                                        <h2 class="text-center">Misi</h2>
+                                        <h2 class="text-center fs-4">Misi</h2>
                                         </div>
                                         <div class="container">
-                                        <div class="col-xs-1" align="center">
+                                        <div class="col-xs-1" align="left">
                                             <div class="col col-sm">
                                             <h6>1. Menyelenggarakan Pelayanan Yang Berkualitas dan Terjangkau Oleh Seluruh Lapisan Masyrakat </h6>
                                             </div>
@@ -142,7 +142,7 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <span just></span>
-                                    <h6>RSPG mempunyai tugas menyelenggarakan upaya penyembuhan dan pemulihan secara paripurna, pendidikan dan pelatihan, penelitian dan pengembangan di bidang kesehatan paru secara serasi, terpadu dan berkesinambungan dengan upaya peningkatan kesehatan lainnya serta melaksanakan upaya rujukan. Berdasarkan Keputusan Menteri Keuangan Nomor 226/KMK.05/2009 tentang Penetapan Rumah Sakit Paru Dr.M.Goenawan Partowidigdo Cisarua Bogor Pada Departemen Kesehatan Sebagai Instansi Pemerintah Yang Menerapkan Pengelolaan Keuangan Badan Layanan umum, RSPG merupakan instansi pemerintah yang menerapakan Pengelolaan Keuangan Badan Layanan Umum dengan status Badan Layanan Umum secara penuh (BLU penuh).</h6>
+                                    <h6 align="justify" >RSPG mempunyai tugas menyelenggarakan upaya penyembuhan dan pemulihan secara paripurna, pendidikan dan pelatihan, penelitian dan pengembangan di bidang kesehatan paru secara serasi, terpadu dan berkesinambungan dengan upaya peningkatan kesehatan lainnya serta melaksanakan upaya rujukan. Berdasarkan Keputusan Menteri Keuangan Nomor 226/KMK.05/2009 tentang Penetapan Rumah Sakit Paru Dr.M.Goenawan Partowidigdo Cisarua Bogor Pada Departemen Kesehatan Sebagai Instansi Pemerintah Yang Menerapkan Pengelolaan Keuangan Badan Layanan umum, RSPG merupakan instansi pemerintah yang menerapakan Pengelolaan Keuangan Badan Layanan Umum dengan status Badan Layanan Umum secara penuh (BLU penuh).</h6>
                                 </div>
                                 </div>
                             </div>
@@ -202,7 +202,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-9">
-                                    <div class="container">
+                                    <div class="container " align="justify">
                                     <div class="row">
                                         <div class="col-6 col-sm-3">
                                         <h6>1. Intergritas</h6>
@@ -296,7 +296,7 @@
                                     </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-9">
+                                <div class="col-sm-9" align="justify">
                                     <div class="row">
                                     <div class="col col-sm">
                                         <h6>1. Peraturan Menteri Kesehatan RI Nomor 251/MENKES/PER/III/2008 tanggal 11 Maret 2008 tentang Organisasi dan Tata Kerja Rumah Sakit Paru Dr.M.Goenawan Partowidigdo Cisarua Bogor; </h6>
