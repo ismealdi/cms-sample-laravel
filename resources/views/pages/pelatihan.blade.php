@@ -24,7 +24,7 @@
                                     </div>
                                     <div class="toggle-content">
                                         <div class="row justify-content-center">
-                                            <iframe src="{{ url('tema/images/MG.pdf') }}" width="50%" height="600">
+                                            <iframe src="{{ url('tema/images/pelataihan1.pdf') }}" width="50%" height="600">
                                             This browser does not support PDFs. Please download the PDF to view it: <a href="{{ url('tema/images/MG.pdf') }}">Download PDF</a>
                                             </iframe>
                                         </div>
@@ -39,8 +39,8 @@
                                     </div>
                                     <div class="toggle-content">
                                         <div class="row justify-content-center">
-                                            <iframe src="{{ url('tema/images/MG.pdf') }}" width="50%" height="600">
-                                            <a href="{{ url('tema/images/MG.pdf') }}">Program Pelatiahan</a>
+                                            <iframe src="{{ url('tema/images/pelataihan1.pdf') }}" width="50%" height="600">
+                                            <a href="{{ url('tema/images/pelataihan1.pdf') }}">Program Pelatiahan</a>
                                             </iframe>
                                         </div>
                                     </div>
@@ -65,6 +65,7 @@
                                     </div>
                                 </div><!-- toggle end -->
                                 <!-- toggle -->
+                        
                                 <!-- toggle end -->
                             </div>                   
                         </div><!-- wrap-acadion end-->

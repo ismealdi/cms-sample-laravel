@@ -11,6 +11,7 @@ use App\Models\Document;
 use App\Models\Layanan;
 use App\Models\Clayanan;
 use App\Models\Galeri;
+use App\Models\Galpelatihan;
 
 class WebController extends Controller
 {
@@ -29,7 +30,13 @@ class WebController extends Controller
     {
         $images = Galeri::paginate(6);
 
-        return view('pages.galeri', compact('images'));
+        return view('pages.', compact('images'));
+    }
+    public function galpelatihan()
+    {
+        $images = Galpelatihan::paginate(6);
+
+        return view('pages.pelatihan', compact('images'));
     }
 
 

@@ -69,30 +69,26 @@
                             <!-- toggle -->
                             <div class="toggle">
                             <div class="toggle-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Visi dan Misi </a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Visi, Misi dan Moto </a>
                             </div>
                             <div class="toggle-content">
-                                <div class="row">
-                                <div class="col-sm-3">
-                                    <div class="toggle-figure res-991-mb-15">
-                                    <img class="img-fluid" src="images/portfolio/post-one-1200x800.jpg" alt="image">
-                                    </div>
-                                </div>
-                                <div class="col-sm-9">
+                                <div class="col">
+                            
+                                <div class="col">
                                     <div class="section-title res-991-pt-30">
-                                    <h2 class="text-center fs-4 ">Visi</h2>
+                                    <h6 class="text-center fs-3 ">Visi</h6>
                                     </div>
                                     <div class="container">
                                     <div class="row">
                                         <div class="text-center">
-                                        <h5 class="fst-italic fs-5"> Menjadi Center Pelayanan Paru dan Bedah Toraks Nasional </h5>
+                                        <h6 class="fst-italic"> Menjadi Center Pelayanan Paru dan Bedah Toraks Nasional </h6>
                                         </div>
                                         <div class="w-100 py-1"></div>
                                         <div class="section-title res-991-pt-30">
-                                        <h2 class="text-center fs-4">Misi</h2>
+                                        <h6 class="text-center fs-3">Misi</h6>
                                         </div>
                                         <div class="container">
-                                        <div class="col-xs-1" align="left">
+                                        <div class="col-xs-1" align="jutify">
                                             <div class="col col-sm">
                                             <h6>1. Menyelenggarakan Pelayanan Yang Berkualitas dan Terjangkau Oleh Seluruh Lapisan Masyrakat </h6>
                                             </div>
@@ -110,12 +106,22 @@
                                             </div>
                                         </div>
                                         </div>
-                                    </div>
+                                        <div class="section-title res-991-pt-30">
+                                            <h6 class="text-center fs-3 ">Moto</h6>
+                                            </div>
+                                            <div class="container">
+                                            <div class="row">
+                                                <div class="text-center">
+                                                <h6 class="fst-italic"> “Kepuasan Anda Kebahagiaan Kami” </h6>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 </div>
                             </div>
                             </div>
+                        </div>
                             <!-- toggle end -->
                             <div class="toggle">
                             <div class="toggle-title">
@@ -142,7 +148,8 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <span just></span>
-                                    <h6 align="justify" >RSPG mempunyai tugas menyelenggarakan upaya penyembuhan dan pemulihan secara paripurna, pendidikan dan pelatihan, penelitian dan pengembangan di bidang kesehatan paru secara serasi, terpadu dan berkesinambungan dengan upaya peningkatan kesehatan lainnya serta melaksanakan upaya rujukan. Berdasarkan Keputusan Menteri Keuangan Nomor 226/KMK.05/2009 tentang Penetapan Rumah Sakit Paru Dr.M.Goenawan Partowidigdo Cisarua Bogor Pada Departemen Kesehatan Sebagai Instansi Pemerintah Yang Menerapkan Pengelolaan Keuangan Badan Layanan umum, RSPG merupakan instansi pemerintah yang menerapakan Pengelolaan Keuangan Badan Layanan Umum dengan status Badan Layanan Umum secara penuh (BLU penuh).</h6>
+                                    <p>RSPG mempunyai tugas menyelenggarakan upaya penyembuhan dan pemulihan secara paripurna, pendidikan dan pelatihan, penelitian dan pengembangan di bidang kesehatan paru secara serasi, terpadu dan berkesinambungan dengan upaya peningkatan kesehatan lainnya serta melaksanakan upaya rujukan. Berdasarkan Keputusan Menteri Keuangan Nomor 226/KMK.05/2009 tentang Penetapan Rumah Sakit Paru Dr.M.Goenawan Partowidigdo Cisarua Bogor Pada Departemen Kesehatan Sebagai Instansi Pemerintah Yang Menerapkan Pengelolaan Keuangan Badan Layanan umum, RSPG merupakan instansi pemerintah yang menerapakan Pengelolaan Keuangan Badan Layanan Umum dengan status Badan Layanan Umum secara penuh (BLU penuh) <a href="/sejarah">VIEW MORE<a/>.</p>
+                                    <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-white btn-inline mb-20" href="#">VIEW MORE</a>
                                 </div>
                                 </div>
                             </div>
@@ -180,14 +187,14 @@
                             </div>
                             <div class="toggle">
                             <div class="toggle-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Nilai Organisasi</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Struktur Organisasi & Nilai Organisasi</a>
                             </div>
                             <div class="toggle-content">
                                 <div class="row">
                                 <div class="col-sm-3">
                                     <div class="toggle-figure res-991-mb-15">
                                     <a href="#gambar-4">
-                                        <img class="img-fluid" src="images/portfolio/norma.jpg" alt="image">
+                                        <img class="img-fluid" src="images/portfolio/strukturrspg.jpg" alt="image">
                                     </a>
                                     <div class="overlay" id="gambar-4">
                                         <div>
@@ -197,12 +204,12 @@
                                             </svg>
                                         </a>
                                         </div>
-                                        <img class="img-fluid" src="images/portfolio/norma.jpg" alt="image">
+                                        <img class="img-fluid" src="images/portfolio/strukturrspg.jpg" alt="image">
                                     </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-9">
-                                    <div class="container " align="justify">
+                                    <div class="container">
                                     <div class="row">
                                         <div class="col-6 col-sm-3">
                                         <h6>1. Intergritas</h6>
@@ -296,7 +303,7 @@
                                     </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-9" align="justify">
+                                <div class="col-sm-9">
                                     <div class="row">
                                     <div class="col col-sm">
                                         <h6>1. Peraturan Menteri Kesehatan RI Nomor 251/MENKES/PER/III/2008 tanggal 11 Maret 2008 tentang Organisasi dan Tata Kerja Rumah Sakit Paru Dr.M.Goenawan Partowidigdo Cisarua Bogor; </h6>

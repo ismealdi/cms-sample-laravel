@@ -32,6 +32,7 @@ Route::namespace('CMS')->prefix('cms')->as('cms.')->middleware('auth')->group(fu
     Route::resource('clayanan', 'ClayananController');
     Route::resource('cdocument', 'CdocumentController');
     Route::resource('galeri', 'GaleriController');
+    Route::resource('galpelatihan','GalpelatihanController');
 
 });
 
@@ -44,6 +45,7 @@ Route::get('/laporan/{slug}', [App\Http\Controllers\WebController::class, 'lapor
 Route::get('/layanan/{slug}', [App\Http\Controllers\WebController::class, 'layanan'])->name('web.layanan');
 Route::get('/layanan/{slug}/{slaug?}', [App\Http\Controllers\WebController::class, 'layananDetail'])->name('web.layanan.detail');
 Route::get('/galeri', [App\Http\Controllers\WebController::class, 'galeri'])->name('web.galeri');
+Route::get('/galpelatihan', [App\Http\Controllers\WebController::class, 'galpelatihan'])->name('web.galpelatihan');
 
 
 Route::get('/profile', function () {
@@ -128,8 +130,8 @@ Route::get('/pelatihan', function () {
     return view('pages.pelatihan');
 });
 
-Route::get('/filelaporan', function () {
-    return view('pages.filelaporan');
+Route::get('/sejarah', function () {
+    return view('pages.sejarah');
 });
 
 
