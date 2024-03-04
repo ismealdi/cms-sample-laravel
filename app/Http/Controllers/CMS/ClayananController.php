@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\CMS;
 
-use App\Models\clayanan;
+use App\Models\Clayanan;
 use Illuminate\Http\Request;
 use App\Http\Requests\SliderRequest;
 use App\Repositories\ClayananRepository;

@@ -7,7 +7,7 @@
             <!--begin::Left-->
             <div class="d-none d-lg-flex align-items-center mr-3">
                 <!--begin::Logo-->
-                <a href="{{ url('/') }}" class="mr-20">
+                <a href="{{ url('/home') }}" class="mr-20">
                     <img alt="Logo" src="{{ url('assets/medias/logo.png') }}" class="max-h-35px" />
                 </a>
                 <!--end::Logo-->

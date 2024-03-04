@@ -47,8 +47,7 @@
                             <!-- post-featured-wrapper -->
                             <div class="ttm-post-featured-wrapper ttm-featured-wrapper">
                                 <div class="ttm-post-featured">
-                                    <img class="img-fluid" src="{{ asset('storage/services/'.$article->banner) }}"
-                                        alt="">
+                                    <img class="img-fluid" src="{{ asset('storage/services/'.$article->banner) }}" alt="">
                                 </div>
                                 <div class="ttm-box-post-date">
                                     <span class="ttm-entry-date">

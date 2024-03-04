@@ -88,15 +88,37 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                     <div class="widget widget_nav_menu clearfix">
-                        <h3 class="widget-title">Tautan Langsung</h3>
+                        <h3 class="widget-title">Kontak Kami</h3>
                         <ul id="menu-footer-quick-links">
-                            <li><a href="#">Janji Temu Dokter</a></li>
-                            <li><a href="#">Jadwal Dokter</a></li>
-                            <li><a href="#">Info Tempat Tidur</a></li>
-                            <!--<li><a href="single-style-1.html">Our Doctors Team</a></li>
-                        <li><a href="blog.html">Departments Services</a></li>
-                        <li><a href="our-team.html">About our Clinic</a></li>-->
-                            <li><a href="#">Kontak Kami</a></li>
+                            <div class="textwidget widget-text">Jalan Raya Puncak KM 83 Desa/Keluarahan Cibeureum,Kec.Cisarua Kab.Bogor Provinsi Jawa Barat Kode Pos 16750
+                                <style>
+                                    .contact-info {
+                                        margin-bottom: 7px;
+                                    }
+                                    .contact-info p {
+                                        margin: 0px;
+                                    }
+                                </style>
+                                <div class="contact-info">
+                                <p><strong>Call Center IGD:</strong></p>
+                                <p>(0251) 8253629</p>
+                            </div>
+                            <div class="contact-info">
+                                <p><strong>Telphone:</strong></p>
+                                <p>(0251) 8253630</p>
+                            </div>
+                            <div class="contact-info">
+                                <p><strong>Faksimili:</strong></p>
+                                <p>(0251) 8257663</p>
+                            </div>
+                            <div class="contact-info">
+                                <p><strong>Email:</strong></p>
+                                <p><a href="mailto:info@rspg-cisarua.co.id">info@rspg-cisarua.co.id</a></p>
+                            </div>
+                            <div class="contact-info">
+                                <p><strong>Website:</strong></p>
+                                <p><a href="https://www.rspg-cisarua.co.id/" target="_blank">https://www.rspg-cisarua.co.id/</a></p>
+                            </div>
                         </ul>
                     </div>
                 </div>

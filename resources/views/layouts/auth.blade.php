@@ -50,5 +50,6 @@
 <script src='{{ url("assets/plugins/custom/prismjs/prismjs.bundle.js") }}'></script>
 <script src='{{ url("assets/js/scripts.bundle.js") }}'></script>
 <script src='{{ url("assets/js/login.js") }}'></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 
 </html>

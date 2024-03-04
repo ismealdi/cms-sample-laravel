@@ -19,7 +19,9 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::get('login',[ App\Http\Controllers\Auth\LoginController::class, 'dd'])->name('dd');
+Route::get('appkm77rsp',[ App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
+Route::post('appkm77rsp',[ App\Http\Controllers\Auth\LoginController::class, 'login']);
 
 Route::namespace('CMS')->prefix('cms')->as('cms.')->middleware('auth')->group(function () {
     Route::resource('service', 'ServiceController');
@@ -129,6 +131,10 @@ Route::get('/pelatihan', function () {
 
 Route::get('/filelaporan', function () {
     return view('pages.filelaporan');
+});
+
+Route::get('/sejarah', function () {
+    return view('pages.sejarah');
 });
 
 

@@ -36,8 +36,9 @@
             <a href="javascript:;" id="kt_login_forgot" class="d-none text-muted text-hover-primary">{{ __('Forgot Your
                 Password?') }}</a>
         </div>
-
-
+        {!! NoCaptcha::renderJs() !!}
+        {!! NoCaptcha::display() !!}
+        
         <button id="kt_login_signin_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">{{ __('Login')
             }}</button>
     </form>
