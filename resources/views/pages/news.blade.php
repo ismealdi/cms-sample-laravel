@@ -68,7 +68,7 @@
                                     </div>
                                     <header class="entry-header">
                                         <h2 class="entry-title"><a
-                                                href="{{ url('berita/'.(isset($item->category) ? $item->category->slug : 'x').'/'.$article->slaug) }}">{{
+                                                href="{{ url('berita/'.(isset($article->category) ? $article->category->slug : 'x').'/'.$article->slaug) }}">{{
                                                 strip_tags($article->title) }}</a>
                                         </h2>
                                     </header>

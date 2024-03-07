@@ -42,6 +42,7 @@
                                     <div class="mb-35">
                                         {!! $service->content !!}    
                                     </div>
+                                    <!-- row end -->
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="mb-35">
@@ -65,7 +66,7 @@
                                                                 </a>
                                                             </div>
                                                             <div class="toggle-content">
-                                                                <h6>First appointment, please bring the following:</h6>
+                                                                <!--<h6>First appointment, please bring the following:</h6>
                                                                 <ul>
                                                                     <li>Insurance card</li>
                                                                     <li>A picture Photo</li>
@@ -75,7 +76,7 @@
                                                                 <h6>Repeat Patient Appointments</h6>
                                                                 <ul><li>All current medications (with prescription )</li></ul>
                                                             </div>
-                                                        </div><!-- toggle end -->
+                                                        </div>--><!-- toggle end -->
                                                         <!-- toggle -->
                                                         <!-- toggle end -->
                                                     </div>                   

@@ -60,7 +60,7 @@
         <div class="menu-submenu menu-submenu-classic menu-submenu-left">
             <ul class="menu-subnav">
                 <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-                    <a href="javascript:;" class="menu-link menu-toggle">
+                    <!--<a href="javascript:;" class="menu-link menu-toggle">
                         <span class="menu-text">Berita</span>
                         <i class="menu-arrow"></i>
                     </a>
@@ -83,7 +83,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </div>-->
                 </li>
                 <li class="menu-item " aria-haspopup="true">
                     <a href="{{ route('cms.galeri.index') }}" class="menu-link">
@@ -115,14 +115,13 @@
             </ul>
         </div>
     </li>
-    <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
+    <!--<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
         <a href="javascript:;" class="menu-link menu-toggle">
             <span class="menu-text">
                 Laporan
                 <span
-                    class="icon-arrow svg-icon svg-icon-primary svg-icon-1.5x"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo9\dist/../src/media/svg/icons\Navigation\Angle-right.svg--><svg
-                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                        height="24px" viewBox="0 0 24 24" version="1.1">
+                    class="icon-arrow svg-icon svg-icon-primary svg-icon-1.5x"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo9\dist/../src/media/svg/icons\Navigation\Angle-right.svg-->
+                    <!--<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                             <polygon points="0 0 24 0 24 24 0 24" />
                             <path
@@ -133,7 +132,7 @@
                     </svg><!--end::Svg Icon--></span>
             </span>
         </a>
-        <div class="menu-submenu menu-submenu-classic menu-submenu-left">
+        <!--<div class="menu-submenu menu-submenu-classic menu-submenu-left">
             <ul class="menu-subnav">
                 <li class="menu-item menu-item-activex" aria-haspopup="true">
                     <a href="{{ route('cms.cdocument.index') }}" class="menu-link">
@@ -159,11 +158,11 @@
                 Gallery
             </span>
         </a>
-    </li>
+    </li>-->
     <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
         <a href="javascript:;" class="menu-link menu-toggle">
             <span class="menu-text">
-                Layanan
+                CMS Humas
                 <span
                     class="icon-arrow svg-icon svg-icon-primary svg-icon-1.5x"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo9\dist/../src/media/svg/icons\Navigation\Angle-right.svg--><svg
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -180,28 +179,70 @@
         </a>
         <div class="menu-submenu menu-submenu-classic menu-submenu-left">
             <ul class="menu-subnav">
-                <li class="menu-item menu-item-activex" aria-haspopup="true">
-                    <a href="{{ route('cms.clayanan.index') }}" class="menu-link">
-                        <span class="menu-text">Katagori Pelayanan</span><span class="menu-desc"></span>
+                <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <span class="menu-text">Berita</span>
+                        <i class="menu-arrow"></i>
                     </a>
+                    <div class="menu-submenu menu-submenu-classic menu-submenu-right" style="right: -100%;">
+                        <ul class="menu-subnav">
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="{{ route('cms.category.index') }}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">Kategori Berita</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="{{ route('cms.news.index') }}" class="menu-link ">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">Update Berita</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="menu-item " aria-haspopup="true">
-                    <a href="{{ route('cms.layanan.index') }}" class="menu-link ">
-                        <span class="menu-text">Jenis Pelayanan</span><span class="menu-desc"></span>
+                <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <span class="menu-text">Laporan</span>
+                        <i class="menu-arrow"></i>
                     </a>
+                    <div class="menu-submenu menu-submenu-classic menu-submenu-right" style="right: -100%;">
+                        <ul class="menu-subnav">
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="{{ route('cms.cdocument.index') }}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">add Folder</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="{{ route('cms.document.index') }}" class="menu-link ">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">add Document</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="menu-item " aria-haspopup="true">
-                    <a href="{{ route('cms.category.index') }}" class="menu-link ">
-                        <span class="menu-text">Pengumuman</span><span class="menu-desc"></span>
+                <!--<li class="menu-item " aria-haspopup="true">
+                    <a href="{{ route('cms.document.index') }}" class="menu-link">
+                        <span class="menu-text">Laporan</span><span class="menu-desc"></span>
                     </a>
-                </li>
+                </li>-->
             </ul>
         </div>
     </li>
     <li class="menu-item menu-item-submenu menu-item-rel" aria-haspopup="false">
-        <a href="{{ route('cms.slider.index') }}" class="menu-link">
+        <a href="{{ route('cms.galpelatihan.index') }}" class="menu-link">
             <span class="menu-text">
-                Schedule
+                Diklat
             </span>
         </a>
     </li>

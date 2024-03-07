@@ -66,9 +66,7 @@
                             <!-- ttm-blog-classic-content -->
                             <div class="ttm-blog-classic-content">
                                 <div class="post-meta">
-                                    <span class="ttm-meta-line byline"><i class="ti ti-user"></i>Admin</span>
-                                    <span class="ttm-meta-line comments-link"><i class="fa fa-comment"></i> 0
-                                        Comment</span>
+
                                     <span class="ttm-meta-line tags-links"><i class="fa fa-tag"></i>{{
                                         $news->category->name }}</span>
                                 </div>

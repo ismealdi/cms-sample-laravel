@@ -13,20 +13,19 @@
       <div class="logos-slide">
         <img src="{{ url('tema/images/client/BNI.png')}}" />
         <img src="{{ url('tema/images/client/bpjs.png')}}" />
-        <img src="{{ url('tema/images/client/client-01.png')}}" />
         <img src="{{ url('tema/images/client/client-02.png')}}" />
         <img src="{{ url('tema/images/client/client-03.png')}}"  />
         <img src="{{ url('tema/images/client/client-04.png')}}"  />
-        <img src="{{ url('tema/images/client/client-05.png')}}"  />
+      
       </div>
 
       <div class="logos-slide">
         <img src="{{ url('tema/images/client/BNI.png')}}" />
         <img src="{{ url('tema/images/client/bpjs.png')}}" />
-        <img src="{{ url('tema/images/client/client-01.png')}}" />
+        
         <img src="{{ url('tema/images/client/client-02.png')}}" />
         <img src="{{ url('tema/images/client/client-03.png')}}"  />
         <img src="{{ url('tema/images/client/client-04.png')}}"  />
-        <img src="{{ url('tema/images/client/client-05.png')}}"  />
+        
       </div>
 </div>

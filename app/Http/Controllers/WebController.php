@@ -11,6 +11,7 @@ use App\Models\Document;
 use App\Models\Layanan;
 use App\Models\Clayanan;
 use App\Models\Galeri;
+use App\Models\Galpelatihan;
 
 class WebController extends Controller
 {
@@ -29,7 +30,13 @@ class WebController extends Controller
     {
         $images = Galeri::paginate(6);
 
-        return view('pages.galeri', compact('images'));
+        return view('pages.', compact('images'));
+    }
+    public function galpelatihan()
+    {
+        $images = Galpelatihan::paginate(6);
+
+        return view('pages.pelatihan', compact('images'));
     }
 
 
@@ -87,7 +94,7 @@ class WebController extends Controller
         $category = null;
 
         if(isset($slug)) {
-            $category = Clayanan::whereSlug($slug)->first();
+            $category = clayanan::whereSlug($slug)->first();
         }
 
         $services = new Layanan();
@@ -96,7 +103,7 @@ class WebController extends Controller
             $services = $services->whereCategoryId($category->id);
         }
 
-        $services = $services->paginate(6);
+        $services = $services->paginate(17);
         $service = $services[0];
 
         return view('pages.layanan', compact('category', 'services', 'service'));
@@ -106,7 +113,7 @@ class WebController extends Controller
         $category = null;
 
         if(isset($slug)) {
-            $category = Clayanan::whereSlug($slug)->first();
+            $category = clayanan::whereSlug($slug)->first();
         }
 
         $services = new Layanan();

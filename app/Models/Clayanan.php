@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Clayanan extends Model
 {
-    public $table = 'Clayanans';
+    public $table = 'clayanans';
 
     public $fillable = [
         'name',

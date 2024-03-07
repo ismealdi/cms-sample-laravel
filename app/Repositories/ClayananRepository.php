@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
 /**
- * Class ClayananRepository.
+ * Class clayananRepository.
  */
 class ClayananRepository extends BaseRepository
 {
